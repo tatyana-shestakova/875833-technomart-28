@@ -50,12 +50,48 @@
       <h1>Перфораторы</h1>
       <section>
         <h3>Фильтры</h3>
-        <!-- Здесь будут фильтры -->
-      </section>
-      <section>
-        <h3>Производители</h3>
-        <h3>Питание</h3>
-        <!-- Здесь будут формы с пунктами выбора значения -->
+        <!-- Здесь будет <input type="range"> -->
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Производители:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="bosch" id="filter-bosch" checked>
+                <label for="filter-bosch">Bosch</label>
+              </li>
+              <li>
+                <input type="checkbox" name="interskol" id="filter-interskol">
+                <label for="filter-interskol">Интерскол</label>
+              </li>
+              <li>
+                <input type="checkbox" name="makita" id="filter-makita" checked>
+                <label for="filter-makita">Makita</label>
+              </li>
+              <li>
+                <input type="checkbox" name="dewalt" id="filter-dewalt">
+                <label for="filter-dewalt">Dewalt</label>
+              </li>
+              <li>
+                <input type="checkbox" name="hitachi" id="filter-hitachi">
+                <label for="filter-hitachi">Hitachi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Питание</legend>
+            <ul>
+              <li>
+                <input type="radio" name="product-group" value="rechargeable" id="filter-rechargeable" checked>
+                <label for="filter-rechargeable">Аккумуляторные</label>
+              </li>
+              <li>
+                <input type="radio" name="product-group" value="network" id="filter-network">
+                <label for="filter-network">Сетевые</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
       </section>
       <section>
         <ul>
@@ -85,8 +121,8 @@
           </li>
           <li>
             <!-- Кнопки при наведении -->
-            <button type="button">Купить</button>
-            <button type="button">В закладки</button>
+            <a href="">Купить</a>
+            <a href="">В закладки</a>
             <!-- Конец. Кнопки при наведении -->
             <a href="">
               <p>
@@ -223,5 +259,11 @@
         <a href="htmlacademy.ru">htmlacademy.ru</a>
       </p>
     </footer>
+    <section>
+      <h2>Товар добавлен в корзину!</h2>
+      <a href="basket.html">Оформить заказ</a>
+      <button type="button">Продолжить покупки</button>
+      <button type="button">Закрыть</button>
+    </section>
   </body>
 </html>
