@@ -49,9 +49,22 @@
       </ul>
       <h1>Перфораторы</h1>
       <section>
-        <h3>Фильтры</h3>
-        <form action="https://echo.htmlacademy.ru" method="get">
-          <!-- Здесь будет <input type="range"> -->
+        <h3>Сортировка:</h3>
+        <!-- Пока разметила списком c ссылками-->
+        <ul>
+          <li><a href="">По цене</a></li>
+          <li><a href="">По типу</a></li>
+          <li><a href="">По функционалу</a></li>
+        </ul>
+        <button type="button">Сортировка по убыванию</button>
+        <button type="button">Сортировка по возрастанию</button>
+        <h3>Фильтр:</h3>
+        <form action="https://echo.htmlacademy.ru" method="get" oninput="resultmax.value=count.value">
+          <fieldset>
+            <legend>Цена:</legend>
+            <input type="range" name="count" step="1" min="0" max="30000" value="25000">
+            <output name="resultmin">0</output> - <output name="resultmax">25000</output>
+          </fieldset>
           <fieldset>
             <legend>Производители:</legend>
             <ul>
