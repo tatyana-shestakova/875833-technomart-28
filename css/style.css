@@ -39,6 +39,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* Стилизация шапки */
 
 .main-navigation {
   font-size: 18px;
@@ -147,4 +148,65 @@ img {
 .site-navigation a:active {
   background-color: #1D2739;
   color: rgba(255, 255, 255, 0.5);
+}
+
+/* Стилизация футера */
+
+.main-footer,
+.main-footer a{
+  background-color: var(--basic-font-deepblue-color);
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-background-grey);
+  font-family: "Cuprum", Arial, sans-serif;
+}
+
+.main-footer ul {
+  list-style: none;
+}
+
+.footer-list-nav-yellow a{
+  color: var(--special-yellowlight);
+}
+
+.footer-list-nav-white a:hover,
+.footer-list-nav-yellow a:hover {
+  text-decoration: underline;
+}
+
+.footer-list-nav-white a:active,
+.footer-list-nav-yellow a:active {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.footer-container-ligth-grey,
+.footer-container-ligth-grey a {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--special-grey);
+}
+
+.footer-container-ligth-grey a{
+  color: var(--special-yellowlight);
+}
+
+.footer-container-ligth-grey a:hover {
+  text-decoration: underline;
+}
+
+.footer-container-ligth-grey a:active {
+  text-decoration: none;
+  color: var(--basic-red);
+}
+
+.socials a {
+  background-color: #212A3A;
+  color: var(--basic-white);
+}
+
+.socials a:hover {
+  background-color: var(--basic-red);
+  text-decoration: none;
 }
