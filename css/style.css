@@ -15,7 +15,6 @@
   --special-greenlight: #8ED78F;
   --special-yellowlight: #FFD180;
   --special-success-color: #5FBB2D;
-  --special-warning-color: #FFBF47;
   --special-error-color: #BA2732;
   --special-lightgrey-gradient: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EAEAEA;
 }
@@ -38,6 +37,19 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* Скрытые элементы */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /* Стилизация шапки */
 
@@ -94,7 +106,7 @@ img {
 }
 
 .btns-user a,
-.btns-user p{
+.btns-user p {
   color: var(--basic-font-black-color);
   background-color: var(--basic-white);
   font-size: 21px;
@@ -225,6 +237,86 @@ img {
   display: none;
 }
 
+/* Index, преимущества */
+
+.advantages {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+
+.advantages .advantages-list {
+  list-style: none;
+}
+
+.advantages .building-materials {
+  background-color: var(--special-ylellow);
+  background-image: url("../img/icon-material.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+}
+
+.advantages .construction-tools {
+  background-color: var(--special-blue);
+  background-image: url("../img/icon-instruments.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+}
+
+.advantages .construction-machinery {
+  background-color: var(--special-lilac);
+  background-image: url("../img/icon-technic.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+}
+
+.advantages .product-sales {
+  background-color: var(--special-greenlight);
+  background-image: url("../img/icon-busket.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+}
+
+.advantages .advantages-delivery {
+  background-color: #FFC047;
+  background-image: url("../img/icon-delivery.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+}
+
+.carousel-goods h2 {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.carousel-goods p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.carousel-goods .perforator {
+  background-image: url("../img/image-catalog-perforator.jpg");
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+}
+
+.carousel-goods .drill {
+  background-image: url("../img/drill.jpg");
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+}
+
+.advantages a {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+}
+
 /* Index, о компании */
 .title {
   font-family: "Cuprum", Arial, sans-serif;
@@ -236,7 +328,7 @@ img {
   line-height: 30px;
 }
 
-.btn-about-company {
+.main-btn {
   font-family: "Cuprum", Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
@@ -245,7 +337,7 @@ img {
   background-color: var(--basic-red);
 }
 
-.btn-about-company:active {
+.main-btn:active {
   background-color: var(--special-error-color);
 }
 
