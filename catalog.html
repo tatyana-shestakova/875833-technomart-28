@@ -56,22 +56,27 @@
         <li><a tabindex="0">Перфораторы</a></li>
       </ul>
       <div class="title-container"><h1 class="title title-large">Перфораторы</h1></div>
-      <section>
-        <h3>Сортировка:</h3>
-        <!-- Пока разметила списком c ссылками-->
-        <ul>
-          <li><a href="">По цене</a></li>
-          <li><a href="">По типу</a></li>
-          <li><a href="">По функционалу</a></li>
-        </ul>
-        <button type="button" aria-label="Сортировка по возрастанию">▲</button>
-        <button type="button" aria-label="Сортировка по убыванию">▼</button>
-        <h3>Фильтр:</h3>
+      <section class="sorting">
+        <div class="container-title-catalog">
+          <h3 class="title-filter">Сортировка:</h3>
+          <ul class="list-sorting">
+            <li><a href="">По цене</a></li>
+            <li><a href="">По типу</a></li>
+            <li><a href="">По функционалу</a></li>
+          </ul>
+          <a href="" class="btn-direction" aria-label="Сортировка по возрастанию">▲</a>
+          <a href="" class="btn-direction" aria-label="Сортировка по убыванию">▼</a>
+        </div>
+        <div class="container-title-catalog">
+          <h3 class="title-filter">Фильтр:</h3>
+        </div>
         <form action="https://echo.htmlacademy.ru" method="get" oninput="resultmax.value=count.value" class="filter">
           <fieldset>
             <legend>Цена:</legend>
-            <input type="range" name="count" step="1" min="0" max="30000" value="25000">
-            <output name="resultmin">0</output> - <output name="resultmax">25000</output>
+            <div class="filter-range">
+              <input type="range" name="count" step="1" min="0" max="35000" value="30000">
+            </div>
+            <output name="resultmin">0</output> - <output name="resultmax">30000</output>
           </fieldset>
           <fieldset>
             <legend>Производители:</legend>
@@ -227,15 +232,15 @@
             </p>
           </li>
         </ul>
-        <ul>
-          <li><a aria-label="Первая страница. Вы сейчас на ней" tabindex="0">1</a></li>
-          <li><a href="">2</a></li>
-          <li><a href="">3</a></li>
-          <li><button type="button">Следующая</button></li>
+        <ul class="pagination-list">
+          <li class="pagination-item active-pagination-item"><a aria-label="Первая страница. Вы сейчас на ней" tabindex="0">1</a></li>
+          <li class="pagination-item"><a href="">2</a></li>
+          <li class="pagination-item"><a href="">3</a></li>
+          <li class="pagination-item"><button type="button">Следующая</button></li>
         </ul>
       </section>
-      <section>
-        <h2>Пара слов о перфораторах</h2>
+      <section class="article-about-puncher">
+        <h2 class="title title-medium">Пара слов о перфораторах</h2>
         <p>
           Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
           Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.

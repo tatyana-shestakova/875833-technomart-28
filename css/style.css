@@ -263,6 +263,11 @@ img {
   line-height: 20px;
 }
 
+.title-large {
+  font-size: 30px;
+  line-height: 30px;
+}
+
 /* Index, преимущества */
 
 .advantages {
@@ -415,7 +420,7 @@ img {
 }
 
 .list-service a:active,
-.list-service a:focus {
+.list-service .current {
   color: var(--basic-font-deepblue-color);
   background-color: var(--basic-white);
 }
@@ -468,16 +473,62 @@ img {
   background-color: #F2F6F8;
 }
 
-.title-large {
-  font-size: 30px;
-  line-height: 30px;
+.container-title-catalog {
+  background-color: #F7F3EC;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
 }
+
+/* Фильтры */
+
+.title-filter {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.list-sorting {
+  list-style: none;
+}
+
+.sorting a {
+  color: rgba(0,0,0,0.3);
+  text-decoration: underline;
+  text-decoration-color: var(--basic-red);
+}
+
+.sorting .btn-direction {
+  text-decoration: none;
+}
+
+.sorting a:hover{
+  color: var(--basic-font-black-color);
+}
+
+.sorting a:active {
+  color: var(--basic-red);
+  text-decoration: none;
+}
+
+/* Форма */
 
 .filter legend {
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.filter-range,
+.filter output {
+  background-color: #F7F3EC;
+}
+
+.filter output{
+  font-size: 17px;
+  line-height: 18px;
 }
 
 .filter ul {
@@ -499,6 +550,8 @@ img {
   text-transform: uppercase;
   border: 1px solid #E5E5E5;
 }
+
+/* Товары */
 
 .catalog-items {
   list-style: none;
@@ -562,11 +615,56 @@ img {
   border-radius: 2px;
 }
 
-.catalog-item .btn-bookmark:hover,
-.catalog-item .btn-bookmark:focus {
+.catalog-item .btn-bookmark:hover {
   border-color: var(--basic-font-deepblue-color);
+}
+
+.catalog-item .btn-bookmark:focus {
+  outline: none;
 }
 
 .catalog-item .btn-bookmark:active {
   opacity: 50%;
+}
+
+/* Пагинация */
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a,
+.pagination-item button {
+  border: 1px solid #E5E5E5;
+  border-radius: 2px;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-font-black-color);
+  background-color: var(--basic-white);
+}
+
+.pagination-item button:focus {
+  outline: #E5E5E5;
+}
+
+.pagination-item a:hover,
+.pagination-item button:hover {
+  border: 1px solid #C5C5C5;
+}
+
+.pagination-item a:active,
+.pagination-item button:active {
+  border: 1px solid #EE3643;
+}
+
+.active-pagination-item a,
+.active-pagination-item button {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+}
+
+/* Статья */
+
+.article-about-puncher {
+  background-color: var(--basic-background-grey);
 }
