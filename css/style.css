@@ -39,6 +39,26 @@ img {
   height: auto;
 }
 
+
+/* Сетка */
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.box {
+  width: 940px;
+  margin: 0 auto;
+}
+
+
 /* Скрытые элементы */
 
 .visually-hidden {
@@ -52,8 +72,22 @@ img {
   overflow: hidden;
 }
 /* Стилизация шапки */
+.main-header {
+  outline: 5px solid red; /*удалить*/
+  outline-offset: -5px; /*удалить*/
+  margin-bottom: 21px;
+  background-color: var(--basic-font-lightgrey-color);
+}
+
+.main-header p {
+  margin: 0;
+  padding: 0;
+}
 
 .main-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-font-black-color);
@@ -63,9 +97,21 @@ img {
   line-height: 24px;
 }
 
+.header-logo {
+  width: 220px;
+  height: 47px;
+}
+
 .navigation-wrapper {
   background-color: var(--special-grey);
   color: var(--basic-white);
+  width: 100%;
+  margin-bottom: 46px;
+}
+
+.navigation-box {
+  display: flex;
+  justify-content: space-between;
 }
 
 .navigation-wrapper input {
@@ -91,6 +137,12 @@ img {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.user-information-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
 .btn-place-order,
 .btn-place-order:focus,
 .btn-place-order:active {
@@ -105,12 +157,12 @@ img {
   background-color: var(--basic-red);
 }
 
-.btns-user a,
-.btns-user p {
+.btns-user a {
   color: var(--basic-font-black-color);
   background-color: var(--basic-white);
   font-size: 21px;
   line-height: 21px;
+  max-width: 150px;
 }
 
 .btns-user a:hover {
@@ -125,6 +177,10 @@ img {
   background-color: var(--basic-font-lightgrey-color);
   font-size: 16px;
   line-height: 18px;
+}
+
+.btn-login {
+  padding-left: 50px;
 }
 
 .header-tagline {
@@ -148,8 +204,14 @@ img {
 }
 
 .site-navigation {
+  width: 940px;
   list-style: none;
+  margin: 0;
+  padding: 0;
   background-color: var(--basic-font-deepblue-color);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
 }
 
 .site-navigation a,
