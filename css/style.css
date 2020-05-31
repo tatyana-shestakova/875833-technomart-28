@@ -73,8 +73,6 @@ img {
 }
 /* Стилизация шапки */
 .main-header {
-  outline: 5px solid red; /*удалить*/
-  outline-offset: -5px; /*удалить*/
   margin-bottom: 21px;
   background-color: var(--basic-font-lightgrey-color);
 }
@@ -230,6 +228,51 @@ img {
 
 /* Стилизация футера */
 
+.main-footer {
+  outline: 5px solid red; /*удалить*/
+  outline-offset: -5px; /*удалить*/
+  margin-top: 70px;
+}
+
+.footer-container {
+  margin-bottom: 54px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-container-ligth-grey-box {
+  padding-top: 34px;
+  padding-bottom: 29px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-footer {
+  width: 220px;
+  height: 68px;
+}
+
+.footer-adress {
+  width: 324px;
+  margin: 0;
+}
+
+.footer-lists {
+  display: flex;
+  flex-direction: column;
+  margin-top: 37px;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-footer p {
+  margin: 0;
+  padding: 0;
+}
+
 .main-footer,
 .main-footer a{
   background-color: var(--basic-font-deepblue-color);
@@ -241,6 +284,16 @@ img {
 
 .main-footer ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-list-nav-white {
+  width: 549px;
+}
+
+.footer-list-nav-yellow {
+  width: 525px;
 }
 
 .footer-list-nav-yellow a{
@@ -279,6 +332,12 @@ img {
   color: var(--basic-red);
 }
 
+.socials {
+  display: flex;
+  width: 134px;
+  justify-content: center;
+}
+
 .socials a {
   background-color: #212A3A;
   color: var(--basic-white);
@@ -291,6 +350,12 @@ img {
 
 .socials a:active {
   color: var(--basic-white);
+}
+
+.footer-feedback {
+  display: flex;
+  width: 286px;
+  justify-content: space-around;
 }
 
 /* Модальные окна */
