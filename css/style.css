@@ -229,8 +229,6 @@ img {
 /* Стилизация футера */
 
 .main-footer {
-  outline: 5px solid red; /*удалить*/
-  outline-offset: -5px; /*удалить*/
   margin-top: 70px;
 }
 
@@ -378,21 +376,29 @@ img {
 .title {
   font-family: "Cuprum", Arial, sans-serif;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
 .title-medium {
   font-size: 30px;
   line-height: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .title-small {
   font-size: 18px;
   line-height: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .title-large {
   font-size: 30px;
   line-height: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 /* Index, преимущества */
@@ -491,6 +497,8 @@ img {
 
 .title-deepblue {
   color: var(--basic-font-deepblue-color);
+  margin: 0;
+  padding: 0;
 }
 
 .container-title {
@@ -572,6 +580,48 @@ img {
 
 /* Index, о компании */
 
+.container-about-company {
+  outline: 5px solid red; /*удалить*/
+  outline-offset: -5px; /*удалить*/
+  display: flex;
+  padding-top: 70px;
+  justify-content: space-between;
+}
+
+.container-about-company p {
+  margin: 0;
+  padding: 0;
+}
+
+.container-about-company h2{
+  margin-bottom: 24px;
+}
+
+.about-company {
+  width: 478px;
+}
+
+.container-about-company .p-box {
+  margin-bottom: 40px;
+}
+
+.delivery-partners {
+  margin: 0;
+  padding: 0;
+  padding-left: 37px;
+  padding-bottom: 20px;
+}
+
+.contacts {
+  width: 300px;
+}
+
+.contacts .map-image {
+  display: block;
+  width: 300px;
+  height: 158px;
+  margin-bottom: 25px;
+}
 
 .main-btn:active {
   background-color: var(--special-error-color);
@@ -614,6 +664,8 @@ img {
   line-height: 18px;
   text-transform: uppercase;
   font-weight: normal;
+  margin: 0;
+  padding: 0;
 }
 
 .list-sorting {
