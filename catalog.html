@@ -7,7 +7,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="page-body">
+  <body class="page-body inner-page">
     <header class="main-header">
       <nav class="main-navigation">
           <div class="navigation-wrapper">
@@ -54,28 +54,33 @@
       </div>
       </nav>
     </header>
-    <main class="box">
+    <main class="box page-catalog">
       <ul class="breadcrumbs">
         <li><a href="index.html"><img src="img/icon-home.svg" width="14" height="12" alt="Вернуться на главную страницу">Главная</a></li>
+        <li>></li>
         <li><a href="">Каталог</a></li>
+        <li>></li>
         <li><a href="">Инструмент</a></li>
+        <li>></li>
         <li><a tabindex="0">Перфораторы</a></li>
       </ul>
       <div class="title-container"><h1 class="title title-large">Перфораторы</h1></div>
-      <section class="sorting">
+      <section class="sorting catalog-sorting">
         <div class="container-title-catalog">
+          <h3 class="title-filter">Фильтр:</h3>
+        </div>
+        <div class="container-title-catalog sorting-box">
           <h3 class="title-filter">Сортировка:</h3>
           <ul class="list-sorting">
             <li><a href="">По цене</a></li>
             <li><a href="">По типу</a></li>
             <li><a href="">По функционалу</a></li>
+            <li><a href="" class="btn-direction" aria-label="Сортировка по возрастанию">▲</a></li>
+            <li><a href="" class="btn-direction" aria-label="Сортировка по убыванию">▼</a></li>
           </ul>
-          <a href="" class="btn-direction" aria-label="Сортировка по возрастанию">▲</a>
-          <a href="" class="btn-direction" aria-label="Сортировка по убыванию">▼</a>
         </div>
-        <div class="container-title-catalog">
-          <h3 class="title-filter">Фильтр:</h3>
-        </div>
+      </section>
+      <section class="sorting filters">
         <form action="https://echo.htmlacademy.ru" method="get" oninput="resultmax.value=count.value" class="filter">
           <fieldset>
             <legend>Цена:</legend>
@@ -86,7 +91,7 @@
           </fieldset>
           <fieldset>
             <legend>Производители:</legend>
-            <ul class="filter-checkbox selection">
+            <ul class="filter-checkbox">
               <li>
                 <input type="checkbox" name="bosch" id="filter-bosch" checked>
                 <label for="filter-bosch">Bosch</label>
@@ -109,9 +114,9 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="last-fieldset">
             <legend>Питание</legend>
-            <ul class="filter-radio selection">
+            <ul class="filter-radio">
               <li>
                 <input type="radio" name="product-group" value="rechargeable" id="filter-rechargeable" checked>
                 <label for="filter-rechargeable">Аккумуляторные</label>
@@ -132,7 +137,7 @@
               <p>
                 <img src="img/catalog-item-bosch-6000.jpg" width="144" height="128" alt="Модель перфоратора BOSCH BFG 6000">
               </p>
-              <h3 class="title-small">Перфоратор BOSCH BFG 6000</h3>
+              <h3 class="title-small">Перфоратор BOSCH<br>BFG 6000</h3>
             </a>
             <p>
               <span class="line-through-price">30500 Р.</span>
@@ -144,7 +149,7 @@
               <p>
                 <img src="img/catalog-item-bosch-6000.jpg" width="144" height="128" alt="Модель перфоратора BOSCH BFG 6000">
               </p>
-              <h3 class="title-small">Перфоратор BOSCH BFG 6000</h3>
+              <h3 class="title-small">Перфоратор BOSCH<br> BFG 6000</h3>
             </a>
             <p>
               <span class="line-through-price">30500 Р.</span>
@@ -152,15 +157,15 @@
             </p>
           </li>
           <li class="catalog-item">
-            <!-- Кнопки при наведении -->
-            <a href="" class="btn-buy btn-buy-hover">Купить</a>
-            <button type="button" class="btn-bookmark btn-buy-hover">В закладки</button>
-            <!-- Конец. Кнопки при наведении -->
+            <div class="modal">
+              <a href="" class="btn-buy btn-buy-hover">Купить</a>
+              <button type="button" class="btn-bookmark btn-buy-hover">В закладки</button>
+            </div>
             <a href="">
               <p>
                 <img src="img/catalog-item-bosch-6000.jpg" width="144" height="128" alt="Модель перфоратора BOSCH BFG 6000">
               </p>
-              <h3 class="title-small">Перфоратор BOSCH BFG 6000</h3>
+              <h3 class="title-small">Перфоратор BOSCH<br>BFG 6000</h3>
             </a>
             <p>
               <span class="line-through-price">30500 Р.</span>
@@ -172,7 +177,7 @@
               <p>
                 <img src="img/catalog-item-bosch-3000.jpg" width="127" height="112" alt="Модель перфоратора BOSCH BFG 3000">
               </p>
-              <h3 class="title-small">Перфоратор BOSCH BFG 3000</h3>
+              <h3 class="title-small">Перфоратор BOSCH<br>BFG 3000</h3>
             </a>
             <p>
               <span class="line-through-price">22500 Р.</span>
@@ -184,7 +189,7 @@
               <p>
                 <img src="img/catalog-item-bosch-6000.jpg" width="144" height="128" alt="Модель перфоратора BOSCH BFG 6000">
               </p>
-              <h3 class="title-small">Перфоратор BOSCH BFG 6000</h3>
+              <h3 class="title-small">Перфоратор BOSCH<br>BFG 6000</h3>
             </a>
             <p>
               <span class="line-through-price">30500 Р.</span>
@@ -196,7 +201,7 @@
               <p>
                 <img src="img/catalog-item-bosch-6000.jpg" width="127" height="112" alt="Модель перфоратора BOSCH BFG 2000">
               </p>
-              <h3 class="title-small">Перфоратор BOSCH BFG 2000</h3>
+              <h3 class="title-small">Перфоратор BOSCH<br>BFG 2000</h3>
             </a>
             <p>
               <span class="red-price">12500 Р.</span>
@@ -207,7 +212,7 @@
               <p>
                 <img src="img/catalog-item-bosch-3000.jpg" width="127" height="112" alt="Модель перфоратора BOSCH BFG 3000">
               </p>
-              <h3 class="title-small">Перфоратор BOSCH BFG 3000</h3>
+              <h3 class="title-small">Перфоратор BOSCH<br>BFG 3000</h3>
             </a>
             <p>
               <span class="line-through-price">22500 Р.</span>
@@ -219,7 +224,7 @@
               <p>
                 <img src="img/catalog-item-bosch-6000.jpg" width="144" height="128" alt="Модель перфоратора BOSCH BFG 6000">
               </p>
-              <h3 class="title-small">Перфоратор BOSCH BFG 6000</h3>
+              <h3 class="title-small">Перфоратор BOSCH<br>BFG 6000</h3>
             </a>
             <p>
               <span class="line-through-price">30500 Р.</span>
@@ -231,7 +236,7 @@
               <p>
                 <img src="img/catalog-item-bosch-6000.jpg" width="127" height="112" alt="Модель перфоратора BOSCH BFG 2000">
               </p>
-              <h3 class="title-small">Перфоратор BOSCH BFG 2000</h3>
+              <h3 class="title-small">Перфоратор BOSCH<br>BFG 2000</h3>
             </a>
             <p>
               <span class="red-price">12500 Р.</span>
@@ -245,14 +250,16 @@
           <li class="pagination-item"><button type="button">Следующая</button></li>
         </ul>
       </section>
-      <section class="article-about-puncher">
+    </main>
+    <section class="article-about-puncher">
+      <div class="box">
         <h2 class="title title-medium">Пара слов о перфораторах</h2>
         <p>
           Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
-          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
         </p>
-      </section>
-    </main>
+      </div>
+    </section>
     <footer class="main-footer">
       <div class="footer-container box">
         <div class="footer-adress">
@@ -264,14 +271,14 @@
           </p>
         </div>
         <div class="footer-lists">
-          <ul class="footer-list-nav-white">
+          <ul class="footer-list footer-list-nav-white">
             <li><a href="">Компания</a></li>
             <li><a href="">Новости</a></li>
             <li><a tabindex="0">Каталог</a></li>
             <li><a href="">Доставка</a></li>
             <li><a href="">Контакты</a></li>
           </ul>
-          <ul class="footer-list-nav-yellow">
+          <ul class="footer-list footer-list-nav-yellow">
             <li><a href="">Материалы</a></li>
             <li><a href="">Техника</a></li>
             <li><a href="">Инструмент</a></li>

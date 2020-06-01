@@ -39,6 +39,9 @@ img {
   height: auto;
 }
 
+*, ::after, ::before {
+  box-sizing: content-box;
+}
 
 /* Сетка */
 
@@ -73,7 +76,6 @@ img {
 }
 /* Стилизация шапки */
 .main-header {
-  margin-bottom: 21px;
   background-color: var(--basic-font-lightgrey-color);
 }
 
@@ -208,7 +210,7 @@ img {
   padding: 0;
   background-color: var(--basic-font-deepblue-color);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 60px;
 }
 
@@ -230,6 +232,10 @@ img {
 
 .main-footer {
   margin-top: 70px;
+}
+
+.inner-page .main-footer {
+  margin-top: 0px;
 }
 
 .footer-container {
@@ -581,8 +587,6 @@ img {
 /* Index, о компании */
 
 .container-about-company {
-  outline: 5px solid red; /*удалить*/
-  outline-offset: -5px; /*удалить*/
   display: flex;
   padding-top: 70px;
   justify-content: space-between;
@@ -635,8 +639,20 @@ img {
 
 /* Catalog*/
 
+.page-catalog {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-content: start;
+}
+
 .breadcrumbs {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  grid-column: 1 / -1;
+  margin-top: 21px;
+  margin-bottom: 20px;
 }
 
 .breadcrumbs a {
@@ -648,6 +664,10 @@ img {
 
 .title-container {
   background-color: #F2F6F8;
+  grid-column: 1 / -1;
+  padding-top: 29px;
+  padding-left: 29px;
+  padding-bottom: 30px;
 }
 
 .container-title-catalog {
@@ -655,6 +675,21 @@ img {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+}
+
+.sorting-box{
+  display: flex;
+}
+
+.catalog-sorting {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 21px;
+  margin-top: 20px;
 }
 
 /* Фильтры */
@@ -666,10 +701,14 @@ img {
   font-weight: normal;
   margin: 0;
   padding: 0;
+  margin-right: 140px;
 }
 
 .list-sorting {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .sorting a {
@@ -693,7 +732,32 @@ img {
 
 /* Форма */
 
-.filter legend {
+.filters {
+  width: 220px;
+}
+
+.filter fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+
+}
+
+.filter fieldset:not(.last-fieldset) {
+  border-bottom: 1px solid #E5E5E5;
+  padding-bottom: 25px;
+}
+
+.filter .last-fieldset {
+  margin-bottom: 18px;
+}
+
+fieldset legend {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.filters legend {
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
@@ -701,23 +765,32 @@ img {
 }
 
 .filter-range,
-.filter output {
+.filters output {
   background-color: #F7F3EC;
 }
 
-.filter output{
+.filters output {
+  display: inline-block;
   font-size: 17px;
   line-height: 18px;
+  width: 95px;
+  height: 28px;
+  margin-top: 9px;
+  text-align: center;
+  padding-top: 10px;
 }
 
-.filter ul {
+.filters ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.selection li {
+.filters li {
   font-size: 15px;
   line-height: 19px;
   text-transform: uppercase;
+  padding-bottom: 16px;
 }
 
 .show-choice,
@@ -732,8 +805,19 @@ img {
 
 /* Товары */
 
+.products {
+  margin-left: 20px;
+}
+
 .catalog-items {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 220px 220px 220px;
+  grid-template-rows: 318px 318px 318px;
+  gap: 20px;
 }
 
 .catalog-item {
@@ -742,6 +826,23 @@ img {
   font-weight: bold;
   text-transform: uppercase;
   border: 1px solid #EAEAEA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.catalog-item .title-small {
+  width: 185px;
+  height: 43px;
+  text-align: center;
+}
+
+.catalog-item span {
+  display: inline-block;
+  margin-left: 45px;
+  width: 141px;
+  padding-left: 32px;
 }
 
 .catalog-item a {
@@ -762,6 +863,11 @@ img {
   background-position: 0 0;
   background-repeat: no-repeat;
   color: var(--basic-white);
+  height: 38px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 13px;
+  margin-bottom: 21px;
 }
 
 .btn-buy-hover {
@@ -810,6 +916,10 @@ img {
 
 .pagination-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-top: 48px;
 }
 
 .pagination-item a,
@@ -846,4 +956,15 @@ img {
 
 .article-about-puncher {
   background-color: var(--basic-background-grey);
+  grid-column: 1 / -1;
+  margin-top: 59px;
+}
+
+.article-about-puncher .title-medium {
+  margin-top: 64px;
+}
+
+.article-about-puncher p {
+  margin-top: 21px;
+  margin-bottom: 72px;
 }
