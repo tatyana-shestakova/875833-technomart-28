@@ -51,8 +51,8 @@
         </div>
       </nav>
     </header>
-    <main class="box">
-      <section class="advantages">
+    <main>
+      <section class="advantages box">
         <h1 class="visually-hidden"> Наши предложения </h1>
         <ul class="advantages-list">
           <li class="building-materials">
@@ -75,25 +75,22 @@
             <p>Доставка</p>
             <a href="" class="btn-advantages">Бесплатно</a>
           </li>
-          <li class="carousel-goods">
-            <div class="perforator">
-              <h2 class="title">Перфораторы</h2>
-              <p>Настоящие мужские игрушки</p>
-              <a href="catalog.html" class="main-btn">Открыть каталог</a>
-            </div>
-            <!-- Скрытый блок -->
-            <div class="modal drill">
-              <h2>Дрели</h2>
-              <p>Соседям на радость!</p>
-              <a href="catalog.html" class="main-btn">Открыть каталог</a>
-            </div>
+          <li class="carousel-goods perforator">
+            <h2 class="title">Перфораторы</h2>
+            <p>Настоящие мужские игрушки</p>
+            <a href="catalog.html" class="main-btn">Открыть каталог</a>
+          </li>
+          <li class="carousel-goods drill modal">
+            <h2>Дрели</h2>
+            <p>Соседям на радость!</p>
+            <a href="catalog.html" class="main-btn">Открыть каталог</a>
           </li>
         </ul>
       </section>
-      <article class="popular-products">
+      <section class="popular-products box">
         <div class="container-title">
           <h2 class="title title-medium title-deepblue">Популярные товары:</h2>
-          <a href="" class="main-btn">Все популярные товары</a>
+          <a href="" class="main-btn bnt-popular">Все популярные товары</a>
         </div>
         <ul class="list-popular-products">
           <li class="catalog-item">
@@ -144,11 +141,11 @@
             </p>
           </li>
         </ul>
-      </article>
-      <article class="popular-manufacturers">
+      </section>
+      <section class="popular-manufacturers box">
         <div class="container-title">
           <h2 class="title title-medium title-deepblue">Популярные производители:</h2>
-          <a href="" class="main-btn">Все производители</a>
+          <a href="" class="main-btn bnt-popular">Все производители</a>
         </div>
         <ul class="list-popular-manufacturers">
           <li><a href="https://www.bosch.ru/"><img src="img/logo-bosch.png" width="126" height="37" alt="Всемирно известный производитель Bosch"></a></li>
@@ -160,39 +157,41 @@
           <li><a href="https://www.aeg.ru/"><img src="img/logo-aeg.png" width="151" height="96" alt="Не такой известный бренд AEG. А зря! У него очень широкий выбор инстурментов"></a></li>
           <li><a href="https://www.metabo.com/ru/ru/"><img src="img/logo-metabo.png" width="204" height="69" alt="Немецкий бренд Metabo уверен в своих инструментах, даже если они каждый день работают на грани своих возможностей"></a></li>
         </ul>
-      </article>
+      </section>
       <div class="container-service">
-        <section class="about-service">
-          <h2 class="title title-medium">Сервисы</h2>
-          <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
-            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        </section>
-        <section class="notice-service">
-          <ul class="list-service">
-            <li><a href="" class="current delivery-item">Доставка</a></li>
-            <li><a href="" class="guarantee-item">Гарантия</a></li>
-            <li><a href="" class="credit-item">Кредит</a></li>
-          </ul>
-          <div class="service service-delivery">
-            <h2 class="title title-medium title-deepblue">Доставка</h2>
-            <p>Мы с удовольствием доставим ваш товар прямок вашему подъезду совершенно бесплатно!<br>
-              Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
-          </div>
-          <!-- Скрытые значения -->
-          <div class="modal">
-            <div class="service service-guarantee">
-              <h2 class="title title-medium title-deepblue">Гарантия</h2>
-              <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+        <div class="box box-service">
+          <section class="about-service">
+            <h2 class="title title-medium">Сервисы</h2>
+            <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
+              Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          </section>
+          <section class="notice-service">
+            <ul class="list-service">
+              <li><a href="" class="delivery-item current">Доставка</a></li>
+              <li><a href="" class="guarantee-item">Гарантия</a></li>
+              <li><a href="" class="credit-item">Кредит</a></li>
+            </ul>
+            <div class="service service-delivery">
+              <h2 class="title title-medium title-deepblue">Доставка</h2>
+              <p>Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно бесплатно!<br>
+                Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
             </div>
-            <div class="service service-credit">
-              <h2 class="title title-medium title-deepblue">Кредит</h2>
-              <p>Залезть в долговую яму стало проще!<br>
-                Кредитные консультанты придут вам на помощь.</p>
+            <!-- Скрытые значения -->
+            <div class="modal">
+              <div class="service service-guarantee">
+                <h2 class="title title-medium title-deepblue">Гарантия</h2>
+                <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+              </div>
+              <div class="service service-credit">
+                <h2 class="title title-medium title-deepblue">Кредит</h2>
+                <p>Залезть в долговую яму стало проще!<br>
+                  Кредитные консультанты придут вам на помощь.</p>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
-      <div class="container-about-company">
+      <div class="container-about-company box">
         <section class="about-company">
           <h2 class="title title-medium">Компания «Техномарт»</h2>
           <p class="p-box">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
@@ -229,7 +228,7 @@
           <ul class="footer-list footer-list-nav-white">
             <li><a href="">Компания</a></li>
             <li><a href="">Новости</a></li>
-            <li><a tabindex="0">Каталог</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
             <li><a href="">Доставка</a></li>
             <li><a href="">Контакты</a></li>
           </ul>

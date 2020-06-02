@@ -377,6 +377,14 @@ img {
   line-height: 18px;
   color: var(--basic-white);
   background-color: var(--basic-red);
+  display: inline-block;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  text-align: center;
+}
+
+.main-btn:active {
+  background-color: var(--special-error-color);
 }
 
 .title {
@@ -415,80 +423,43 @@ img {
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-white);
+  margin-top: 59px;
+}
+
+.advantages p {
+  margin: 0;
+  padding: 0;
+  margin-left: 23px;
+  margin-top: 20px;
+  margin-bottom: 14px;
 }
 
 .advantages .advantages-list {
   list-style: none;
-}
-
-.advantages .building-materials {
-  background-color: var(--special-ylellow);
-  background-image: url("../img/icon-material.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
-}
-
-.advantages .construction-tools {
-  background-color: var(--special-blue);
-  background-image: url("../img/icon-instruments.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
-}
-
-.advantages .construction-machinery {
-  background-color: var(--special-lilac);
-  background-image: url("../img/icon-technic.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
-}
-
-.advantages .product-sales {
-  background-color: var(--special-greenlight);
-  background-image: url("../img/icon-busket.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
-}
-
-.advantages .advantages-delivery {
-  background-color: #FFC047;
-  background-image: url("../img/icon-delivery.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
-}
-
-.carousel-goods h2 {
-  font-size: 36px;
-  line-height: 36px;
-}
-
-.carousel-goods p {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.carousel-goods .perforator {
-  background-image: url("../img/image-catalog-perforator.jpg");
-  background-repeat: no-repeat;
-  background-position: 0% 0%;
-}
-
-.carousel-goods .drill {
-  background-image: url("../img/drill.jpg");
-  background-repeat: no-repeat;
-  background-position: 0% 0%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 123px 123px 123px;
+  gap: 20px;
 }
 
 .advantages a {
+  display: inline-block;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-white);
   text-transform: uppercase;
+  margin-left: 23px;
 }
 
 .advantages .btn-advantages {
   background-color: rgba(255,255,255,0.3);
+  width: 135px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .advantages .btn-advantages:hover {
@@ -499,34 +470,152 @@ img {
   background-color: rgba(169,169,169,0.3);
 }
 
+.advantages-list li {
+  background-repeat: no-repeat;
+  background-position: 80% 50%;
+}
+
+.advantages .building-materials {
+  background-color: var(--special-ylellow);
+  background-image: url("../img/icon-material.svg");
+}
+
+.advantages .construction-tools {
+  background-color: var(--special-blue);
+  background-image: url("../img/icon-instruments.svg");
+}
+
+.advantages .construction-machinery {
+  background-color: var(--special-lilac);
+  background-image: url("../img/icon-technic.svg");
+}
+
+.advantages .product-sales {
+  background-color: var(--special-greenlight);
+  background-image: url("../img/icon-busket.svg");
+}
+
+.advantages .advantages-delivery {
+  background-color: #FFC047;
+  background-image: url("../img/icon-delivery.svg");
+}
+
+.carousel-goods {
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+}
+
+.carousel-goods h2 {
+  font-size: 36px;
+  line-height: 36px;
+  display: inline-block;
+  margin-top: 23px;
+  margin-left: 24px;
+  margin-bottom: 5px;
+}
+
+.carousel-goods p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin-left: 24px;
+}
+
+.carousel-goods .main-btn {
+  width: 192px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  text-align: center;
+}
+
+.perforator {
+  background-image: url("../img/image-catalog-perforator.jpg");
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+}
+
+.drill {
+  background-image: url("../img/drill.jpg");
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+}
+
 /* Index, популярные товары */
+
+.popular-products {
+  display: flex;
+  flex-direction: column;
+  margin-top: 59px;
+  margin-bottom: 70px;
+}
+
+.popular-products p {
+  padding: 0;
+  margin: 0;
+}
 
 .title-deepblue {
   color: var(--basic-font-deepblue-color);
   margin: 0;
   padding: 0;
+  display: inline-block;
+  margin-left: 29px;
 }
 
 .container-title {
   background-color: #F9F5F0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+ .bnt-popular {
+  display: inline-block;
+  width: 192px;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 26px;
+  margin-right: 14px;
 }
 
 .list-popular-products {
   list-style: none;
-}
-
-.list-popular-products a {
-  border: 1px solid #EAEAEA;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 220px 220px 220px 220px;
+  grid-template-rows: 318px ;
+  gap: 20px;
 }
 
 /* Index, популярные производители */
 
+.popular-manufacturers {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
+}
+
 .list-popular-manufacturers {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 220px 220px 220px 220px;
+  grid-template-rows: 145px 145px;
+  gap: 20px;
 }
 
 .list-popular-manufacturers a {
   border: 1px solid #EAEAEA;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 145px;
 }
 
 .list-popular-manufacturers a:hover {
@@ -537,13 +626,57 @@ img {
   opacity: 0.5;
 }
 
+.popular-manufacturers .bnt-popular {
+  margin-right: 19px;
+}
+
 /* Index, о сервисах */
 .container-service {
   background-color: var(--basic-background-grey);
 }
 
+.container-service p{
+  margin: 0;
+  padding: 0;
+}
+
+.box-service {
+  display: flex;
+  flex-direction: column;
+  padding-top: 64px;
+  padding-bottom: 49px;
+}
+
+.about-service {
+  margin-bottom: 21px;
+}
+
+.about-service h2 {
+  margin-bottom: 25px;
+}
+
+.notice-service {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 49px;
+}
+
+.notice-service .title-deepblue {
+  margin-left: 0;
+  margin-bottom: 30px;
+}
+
+.service {
+  width: 630px;
+  padding-bottom: 50px;
+}
+
 .list-service {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 240px;
+  margin-right: 80px;
 }
 
 .list-service a {
@@ -553,6 +686,11 @@ img {
   line-height: 30px;
   background-color: var(--basic-font-deepblue-color);
   color: var(--basic-white);
+  display: inline-flex;
+  width: 218px;
+  height: 61px;
+  padding-left: 22px;
+  align-items: center;
 }
 
 .list-service a:hover {
@@ -603,6 +741,13 @@ img {
 
 .about-company {
   width: 478px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-company .main-btn {
+  width: 220px;
 }
 
 .container-about-company .p-box {
@@ -618,6 +763,8 @@ img {
 
 .contacts {
   width: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
 .contacts .map-image {
@@ -625,10 +772,6 @@ img {
   width: 300px;
   height: 158px;
   margin-bottom: 25px;
-}
-
-.main-btn:active {
-  background-color: var(--special-error-color);
 }
 
 .delivery-partners {
@@ -851,6 +994,11 @@ fieldset legend {
 
 .catalog-item:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.list-popular-products .catalog-item {
+  border: 1px solid #EAEAEA;
+  box-shadow: none;
 }
 
 .catalog-item .line-through-price {
