@@ -410,6 +410,10 @@ input[type="radio"].visually-hidden {
 }
 
 /* Стилизация футера */
+.main-footer p {
+  margin: 0;
+  padding: 0;
+}
 
 .main-footer {
   margin-top: 70px;
@@ -442,20 +446,24 @@ input[type="radio"].visually-hidden {
   margin: 0;
 }
 
+.footer-adress p {
+  margin-top: 22px;
+}
+
 .footer-lists {
   display: flex;
   flex-direction: column;
-  margin-top: 37px;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 549px;
+  height: 82px;
+  margin-top: 40px;
 }
 
 .footer-list {
   display: flex;
   justify-content: space-between;
-}
-
-.main-footer p {
-  margin: 0;
-  padding: 0;
+  flex-wrap: wrap;
 }
 
 .main-footer,
@@ -520,12 +528,21 @@ input[type="radio"].visually-hidden {
 .socials {
   display: flex;
   width: 134px;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 134px;
+  position: relative;
 }
 
 .socials a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
   background-color: #212A3A;
   color: var(--basic-white);
+  border-radius: 50%;
 }
 
 .socials a:hover {
@@ -540,7 +557,13 @@ input[type="radio"].visually-hidden {
 .footer-feedback {
   display: flex;
   width: 286px;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.footer-feedback p {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 /* Модальные окна */
