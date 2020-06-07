@@ -20,7 +20,7 @@
 }
 
 body {
-  min-width: 1200px;
+  min-width: 960px;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
@@ -64,16 +64,21 @@ img {
 
 /* Скрытые элементы */
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 /* Стилизация шапки */
 .main-header {
   background-color: var(--basic-font-lightgrey-color);
@@ -97,39 +102,70 @@ img {
   line-height: 24px;
 }
 
-.header-logo {
-  width: 220px;
-  height: 47px;
-}
-
 .navigation-wrapper {
   background-color: var(--special-grey);
   color: var(--basic-white);
   width: 100%;
-  margin-bottom: 46px;
+  border-bottom: 5px solid var(--basic-font-lightgrey-color);
 }
 
 .navigation-box {
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
+  height: 42px;
 }
 
 .navigation-wrapper input {
-  color: var(--basic-white);
   background-color: var(--special-grey);
+  height: 42px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  width: 228px;
+  padding-left: 42px;
+  background-image: url(../img/icon-search-grey.svg);
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position: 17px 11px;
+}
+
+.navigation-wrapper input::placeholder {
+  color: var(--basic-white);
+}
+
+.navigation-wrapper input:hover {
+  background-image: url(../img/icon-search.svg);
 }
 
 .navigation-wrapper input:focus {
   color: var(--basic-font-black-color);
   background-color: var(--basic-white);
+  background-image: url(../img/icon-search-red.svg);
+}
+
+.navigation-wrapper input:focus::placeholder {
+  color: var(--basic-font-black-color);
 }
 
 .navigation-wrapper a,
 .navigation-wrapper a:focus {
   color: var(--basic-white);
+  padding-top: 9px;
+  padding-bottom: 9px;
+  text-align: center;
 }
 
-.navigation-wrapper a:hover:not(.header-logo, .btn-place-order) {
+.navigation-wrapper .header-logo,
+.navigation-wrapper .header-logo:focus {
+  width: 220px;
+  height: 47px;
+  padding: 0;
+  border: 0;
+  outline-color: var(--basic-font-lightgrey-color);
+}
+
+.navigation-wrapper a:hover:not(.header-logo):not(.btn-place-order) {
   background-color: #161D29;
 }
 
@@ -139,14 +175,16 @@ img {
 
 .user-information-container {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 41px;
 }
 
 .btn-place-order,
 .btn-place-order:focus,
 .btn-place-order:active {
   background-color: var(--basic-green);
+  width: 150px;
 }
 
 .btn-place-order:hover {
@@ -155,6 +193,89 @@ img {
 
 .full-basket {
   background-color: var(--basic-red);
+}
+
+.btn-bookmarks {
+  width: 163px;
+}
+
+.btn-basket {
+  width: 136px;
+}
+
+.login {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 51px;
+  width: 299px;
+  justify-content: center;
+}
+
+.not-login {
+  margin-left: 69px;
+}
+
+.login p {
+  width: 299px;
+  background-color: var(--basic-white);
+  padding-top: 10.5px;
+  padding-bottom: 10.5px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 7px;
+}
+
+.user-name::before {
+  content: " ";
+  width: 20px;
+  height: 18px;
+  position: absolute;
+  background-image: url(../img/icon-user.svg);
+  background-repeat: no-repeat;
+  background-size: 20px 18px;
+  left: 15px;
+  top: 13px;
+}
+
+.user-name:hover:not(:active)::before{
+  background-image: url(../img/icon-user1.svg);
+}
+
+.login .user-name:hover {
+  color: var(--basic-font-black-color)
+}
+
+.btn-logout {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 19px;
+  height: 17px;
+  background-color: var(--basic-white);
+  background-image: url(../img/icon-logout.svg);
+  background-size: 19px 17px;
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  outline: none;
+}
+
+.btn-logout:hover:not(:active) {
+  background-image: url(../img/icon-logout1.svg);
+}
+
+.users-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 210px;
+}
+
+.users-list li:last-child::before {
+  content: "•";
+  color: var(--basic-font-black-color);
 }
 
 .btns-user a {
@@ -179,28 +300,73 @@ img {
   line-height: 18px;
 }
 
-.btn-login {
-  padding-left: 50px;
+.not-login {
+  display: flex;
+  justify-content: space-between;
+  width: 281px;
 }
 
-.header-tagline {
+.btn-login {
+  width: 102px;
+  padding-left: 19px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-image: url(../img/icon-login.svg);
+  background-repeat: no-repeat;
+  background-size: 20px 17px;
+  background-position: 19px 13px;
+}
+
+.btn-login:hover:not(:active) {
+  background-image: url(../img/icon-login1.svg);
+}
+
+.btn-registration {
+  text-align: center;
+  width: 150px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.user-information-container .header-tagline {
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
   color: var(--basic-red);
+  margin-left: 30px;
+  width: 197px;
 }
 
-.header-adress {
+.user-information-container .header-adress {
   color: var(--basic-font-deepblue-color);
   font-size: 14px;
   line-height: 24px;
+  width: 270px;
+  text-align: center;
+  margin-left: 93px;
 }
 
-.header-adress a {
+.header-adress .telephone-number {
+  position: relative;
+  display: inline-block;
+  text-align: left;
   color: var(--basic-red);
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
+  border: 3px solid var(--basic-white);
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 74px;
+  width: 190px;
+  margin-bottom: 3px;
+}
+
+.telephone-number img {
+  position: absolute;
+  top: 11px;
+  left: 40px;
 }
 
 .site-navigation {
@@ -210,13 +376,28 @@ img {
   padding: 0;
   background-color: var(--basic-font-deepblue-color);
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 60px;
+  margin-top: 40px;
 }
 
 .site-navigation a,
 .site-navigation a:focus {
+  display: block;
   color: var(--basic-white);
+  padding-top: 16px;
+  padding-bottom: 20px;
+  padding-right: 24px;
+  padding-left: 27px;
+}
+
+.site-navigation .site-navigation-first {
+  padding-left: 52px;
+}
+
+.site-navigation .site-navigation-last {
+  padding-right: 47px;
 }
 
 .site-navigation a:hover {
