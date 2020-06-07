@@ -42,7 +42,7 @@
               </p>
               <ul class="users-list">
                 <li><a href="" class="account">Мои заказы</a></li>
-                <li><a href="" class="account">Личный кабинет</a></li>
+                <li><a href="" class="account pesonal-account">Личный кабинет</a></li>
               </ul>
             </div>
           </div>
@@ -60,12 +60,9 @@
     </header>
     <main class="box page-catalog">
       <ul class="breadcrumbs">
-        <li><a href="index.html"><img src="img/icon-home.svg" width="14" height="12" alt="Вернуться на главную страницу">Главная</a></li>
-        <li>></li>
+        <li><a href="index.html"><img src="img/icon-home.svg" width="14" height="12" alt="Вернуться на главную страницу"><span class="visually-hidden">Главная</span></a></li>
         <li><a href="">Каталог</a></li>
-        <li>></li>
         <li><a href="">Инструмент</a></li>
-        <li>></li>
         <li><a tabindex="0">Перфораторы</a></li>
       </ul>
       <div class="title-container"><h1 class="title title-large">Перфораторы</h1></div>
@@ -97,23 +94,23 @@
             <legend>Производители:</legend>
             <ul class="filter-checkbox">
               <li>
-                <input type="checkbox" name="bosch" id="filter-bosch" checked>
+                <input type="checkbox" name="bosch" id="filter-bosch" class="visually-hidden filter-checkboxs" checked>
                 <label for="filter-bosch">Bosch</label>
               </li>
               <li>
-                <input type="checkbox" name="interskol" id="filter-interskol">
+                <input type="checkbox" name="interskol" id="filter-interskol" class="visually-hidden filter-checkboxs">
                 <label for="filter-interskol">Интерскол</label>
               </li>
               <li>
-                <input type="checkbox" name="makita" id="filter-makita" checked>
+                <input type="checkbox" name="makita" id="filter-makita" class="visually-hidden filter-checkboxs" checked>
                 <label for="filter-makita">Makita</label>
               </li>
               <li>
-                <input type="checkbox" name="dewalt" id="filter-dewalt">
+                <input type="checkbox" name="dewalt" id="filter-dewalt" class="visually-hidden filter-checkboxs">
                 <label for="filter-dewalt">Dewalt</label>
               </li>
               <li>
-                <input type="checkbox" name="hitachi" id="filter-hitachi">
+                <input type="checkbox" name="hitachi" id="filter-hitachi" class="visually-hidden filter-checkboxs">
                 <label for="filter-hitachi">Hitachi</label>
               </li>
             </ul>
@@ -122,11 +119,11 @@
             <legend>Питание</legend>
             <ul class="filter-radio">
               <li>
-                <input type="radio" name="product-group" value="rechargeable" id="filter-rechargeable" checked>
+                <input type="radio" name="product-group" value="rechargeable" id="filter-rechargeable" class="visually-hidden filter-radios" checked>
                 <label for="filter-rechargeable">Аккумуляторные</label>
               </li>
               <li>
-                <input type="radio" name="product-group" value="network" id="filter-network">
+                <input type="radio" name="product-group" value="network" class="visually-hidden filter-radios" id="filter-network">
                 <label for="filter-network">Сетевые</label>
               </li>
             </ul>
@@ -254,6 +251,15 @@
           <li class="pagination-item"><button type="button">Следующая</button></li>
         </ul>
       </section>
+      <!-- Скрытое окно добавления в корзину -->
+      <section class="added-to-cart">
+        <h2 class="title">Товар добавлен в корзину!</h2>
+        <div class="btn-added-to-cart">
+          <a href="basket.html" class="main-btn">Оформить заказ</a>
+          <button type="button" class="main-btn">Продолжить покупки</button>
+        </div>
+        <button type="button" class="hidden-btn-maps" aria-label="Кнопка Закрыть"></button>
+      </section>
     </main>
     <section class="article-about-puncher">
       <div class="box">
@@ -314,11 +320,5 @@
         </div>
       </div>
     </footer>
-    <section class="modal">
-      <h2>Товар добавлен в корзину!</h2>
-      <a href="basket.html">Оформить заказ</a>
-      <button type="button">Продолжить покупки</button>
-      <button type="button">Закрыть</button>
-    </section>
   </body>
 </html>
