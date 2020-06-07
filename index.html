@@ -213,6 +213,32 @@
           </a>
           <a href="" class="main-btn btn-about-company">Заблудились? Напишите нам!</a>
         </section>
+        <!-- Скрытый блок с картой -->
+        <section class="modal-maps modal">
+          <h2 class="visually-hidden">Как нас найти</h2>
+          <a href="https://yandex.ru/maps/" class="hidden-maps"><img src="img/map-popup.png" width="940" height="445" alt="Наш адрес: город Санкт-Петербург, улица Большая Конюшенная, дом 19/8"></a>
+          <button type="button" class="hidden-btn-maps" aria-label="Кнопка Закрыть"></button>
+        </section>
+        <!-- Скрытый блок с формой -->
+        <section class="form-modal">
+          <h2 class="visually-hidden">Напишите нам!</h2>
+          <form action="https://echo.htmlacademy.ru" method="post" class="form-feedback">
+            <p class="appointment-item">
+              <label for="user-name">Ваше имя:</label>
+              <input type="text" name="name" id="user-name" placeholder="Имя Фамилия">
+            </p>
+            <p class="appointment-item">
+              <label for="user-email">Ваш e-mail:</label>
+              <input type="email" name="email" id="user-email" placeholder="email@example.com">
+            </p>
+            <p class="appointment-text-area">
+              <label for="user-text-mail">Текст письма:</label>
+              <textarea name="text-mail" id="user-text-mail">В свободной форме</textarea>
+            </p>
+            <button type="submit" class="main-btn btn-send-form">Отправить</button>
+          </form>
+          <button type="button" class="hidden-btn-maps btn-close" aria-label="Кнопка Закрыть"></button>
+        </section>
       </div>
     </main>
     <footer class="main-footer">
@@ -265,29 +291,5 @@
         </div>
       </div>
     </footer>
-    <section class="modal">
-      <h2 class="visually-hidden">Напишите нам!</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="user-name">Ваше имя:</label>
-          <input type="text" name="name" id="user-name" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="user-email">Ваш e-mail:</label>
-          <input type="email" name="email" id="user-email" placeholder="email@example.com">
-        </p>
-        <p>
-          <label for="user-text-mail">Текст письма:</label>
-          <textarea name="text-mail" id="user-text-mail">В свободной форме</textarea>
-        </p>
-        <button type="submit">Оформить заказ</button>
-      </form>
-      <button type="button">Закрыть</button>
-    </section>
-    <section class="modal">
-      <h2 class="visually-hidden">Как нас найти</h2>
-      <a href="https://yandex.ru/maps/"><img src="img/image-map-popup.png" width="943" height="449" alt="Наш адрес: город Санкт-Петербург, улица Большая Конюшенная, дом 19/8"></a>
-      <button type="button">Закрыть</button>
-    </section>
   </body>
 </html>
