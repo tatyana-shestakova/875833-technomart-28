@@ -824,6 +824,22 @@ input[type="radio"].visually-hidden {
   width: 192px;
 }
 
+/* Свойства товара */
+
+.new:after {
+  content: " ";
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  background-image: url(../img/catalog-new.png);
+  background-repeat: no-repeat;
+  background-size: 70px;
+  position: absolute;
+  top: 0px;
+  left: 149px;
+  z-index: 2;
+}
+
 /* Index, основные свойства */
 
 .main-btn {
@@ -1416,6 +1432,8 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 .sorting a {
@@ -1426,6 +1444,11 @@ input[type="radio"].visually-hidden {
 
 .sorting .btn-direction {
   text-decoration: none;
+}
+
+.sorting .btn-direction:last-child {
+  margin-left: 15px;
+  margin-right: 14px;
 }
 
 .sorting a:hover{
@@ -1454,7 +1477,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 25px;
 }
 
-.filter label {
+.filter label:not(.min-price):not(.max-price) {
   position: relative;
   display: block;
   cursor: pointer;
@@ -1514,11 +1537,71 @@ fieldset legend {
 }
 
 .range-controls {
-  height: 80px;
+  height: 41px;
   background-color: #F7F3EC;
   border-radius: 4px;
   margin-bottom: 9px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  position: relative;
 }
+
+.range-controls .scale {
+  height: 2px;
+  background-color: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 84%;
+  height: 2px;
+  background-color: #00ca74;
+}
+
+.range-controls .toggle {
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  position: absolute;
+  top: 29px;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  right: 40px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-controls label {
+  font-size: 16px;
+}
+
+.price-controls input {
+  width: 76px;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  background-color: #F7F3EC;
+  font-family: inherit;
+  font-size: 17px;
+}
+
+
 
 .filters ul {
   list-style: none;
