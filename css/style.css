@@ -394,7 +394,7 @@ input[type="radio"].visually-hidden {
 
 .header-adress .telephone-number {
   position: relative;
-  display: inline-block;
+  display: block;
   text-align: left;
   color: var(--basic-red);
   font-size: 21px;
@@ -438,11 +438,13 @@ input[type="radio"].visually-hidden {
   padding-left: 27px;
 }
 
-.site-navigation .site-navigation-first {
+.site-navigation .site-navigation-first,
+.site-navigation .site-navigation-first:focus {
   padding-left: 52px;
 }
 
-.site-navigation .site-navigation-last {
+.site-navigation .site-navigation-last,
+.site-navigation .site-navigation-last:focus {
   padding-right: 47px;
 }
 
@@ -820,7 +822,7 @@ input[type="radio"].visually-hidden {
 }
 
 .btn-added-to-cart .main-btn {
-  display: inline-block;
+  display: block;
   width: 192px;
 }
 
@@ -849,7 +851,7 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
   color: var(--basic-white);
   background-color: var(--basic-red);
-  display: inline-block;
+  display: block;
   padding-top: 11px;
   padding-bottom: 9px;
   text-align: center;
@@ -917,7 +919,7 @@ input[type="radio"].visually-hidden {
 }
 
 .advantages a {
-  display: inline-block;
+  display: block;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
@@ -1014,7 +1016,6 @@ input[type="radio"].visually-hidden {
 .carousel-goods h2 {
   font-size: 36px;
   line-height: 36px;
-  display: inline-block;
   margin-top: 23px;
   margin-left: 24px;
   margin-bottom: 5px;
@@ -1066,7 +1067,7 @@ input[type="radio"].visually-hidden {
   color: var(--basic-font-deepblue-color);
   margin: 0;
   padding: 0;
-  display: inline-block;
+  display: block;
   margin-left: 29px;
 }
 
@@ -1079,7 +1080,7 @@ input[type="radio"].visually-hidden {
 }
 
  .bnt-popular {
-  display: inline-block;
+  display: block;
   width: 192px;
   text-align: center;
   margin-top: 25px;
@@ -1117,7 +1118,7 @@ input[type="radio"].visually-hidden {
 
 .list-popular-manufacturers a {
   border: 1px solid #EAEAEA;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 220px;
@@ -1193,7 +1194,7 @@ input[type="radio"].visually-hidden {
   line-height: 30px;
   background-color: var(--basic-font-deepblue-color);
   color: var(--basic-white);
-  display: inline-flex;
+  display: flex;
   width: 218px;
   height: 61px;
   padding-left: 22px;
@@ -1666,10 +1667,31 @@ fieldset legend {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  cursor: pointer;
+}
+
+.catalog-item:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-item .hidden-block {
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 41px;
 }
 
 .catalog-item-image {
   object-fit: contain;
+  display: block;
+}
+
+.catalog-item:hover .catalog-item-image:not(.products-image) {
+  visibility: hidden;
+}
+
+.catalog-item:hover .hidden-block {
+  display: block;
 }
 
 .catalog-item .title-small {
@@ -1699,16 +1721,11 @@ fieldset legend {
 }
 
 .catalog-item a {
-  display: inline-block;
   color: var(--basic-font-black-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-
-.catalog-item:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .list-popular-products .catalog-item {
@@ -1718,6 +1735,7 @@ fieldset legend {
 
 .catalog-item .line-through-price {
   display: inline-block;
+  vertical-align: middle;
   text-decoration: line-through;
   color: #A9A9A9;
 }
@@ -1734,6 +1752,7 @@ fieldset legend {
 
 .catalog-item .red-price {
   display: inline-block;
+  vertical-align: middle;
   background-image: url("../img/red-button.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -1744,6 +1763,7 @@ fieldset legend {
 }
 
 .btn-buy-hover {
+  display: block;
   border: none;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
@@ -1755,6 +1775,25 @@ fieldset legend {
 .catalog-item .btn-buy:focus {
   color: var(--basic-white);
   background-color: var(--basic-green);
+  border-radius: 2px;
+  border-bottom: 3px solid #367315;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  width: 120px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.catalog-item .btn-buy::before {
+  content: " ";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/icon-cart.svg);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  left: 30px;
 }
 
 .catalog-item .btn-buy:hover {
@@ -1766,11 +1805,14 @@ fieldset legend {
 }
 
 .catalog-item .btn-bookmark {
+  padding: 0;
   background-color: var(--basic-white);
-  border: 3px solid;
-  border-color: var(--special-success-color);
+  border: 3px solid var(--special-success-color);
   color: var(--basic-font-deepblue-color);
   border-radius: 2px;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  width: 129px;
 }
 
 .catalog-item .btn-bookmark:hover {
@@ -1807,6 +1849,7 @@ fieldset legend {
   color: var(--basic-font-black-color);
   background-color: var(--basic-white);
   margin-right: 10px;
+  text-transform: uppercase;
 }
 
 .pagination-item:last-child {
