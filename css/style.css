@@ -181,14 +181,15 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-top: 41px;
+  margin-top: 40px;
 }
 
 .btn-place-order,
 .btn-place-order:focus,
 .btn-place-order:active {
   background-color: var(--basic-green);
-  width: 150px;
+  width: 147px;
+  padding-left: 3px;
 }
 
 .btn-place-order:hover {
@@ -213,12 +214,12 @@ input[type="radio"].visually-hidden {
 }
 
 .btn-basket {
-  width: 130px;
+  width: 127px;
   background-image: url(../img/icon-cart.svg);
   background-repeat: no-repeat;
   background-position: 25px 13px;
   background-size: 15px;
-  padding-left: 20px;
+  padding-left: 23px;
 }
 
 .btn-basket:hover:not(:active) {
@@ -244,7 +245,8 @@ input[type="radio"].visually-hidden {
   padding-bottom: 10.5px;
   text-align: center;
   position: relative;
-  margin-bottom: 7px;
+  margin-bottom: 3px;
+  margin-top: 2px;
 }
 
 .user-name::before {
@@ -281,8 +283,8 @@ input[type="radio"].visually-hidden {
   background-image: url(../img/icon-logout.svg);
   background-size: 19px 17px;
   position: absolute;
-  right: 14px;
-  bottom: 14px;
+  right: 18px;
+  bottom: 15px;
   outline: none;
 }
 
@@ -349,6 +351,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   width: 281px;
+  margin-top: 1px;
 }
 
 .btn-login {
@@ -381,6 +384,7 @@ input[type="radio"].visually-hidden {
   color: var(--basic-red);
   margin-left: 30px;
   width: 197px;
+
 }
 
 .user-information-container .header-adress {
@@ -403,15 +407,15 @@ input[type="radio"].visually-hidden {
   border: 3px solid var(--basic-white);
   padding-top: 5px;
   padding-bottom: 6px;
-  padding-left: 74px;
-  width: 190px;
-  margin-bottom: 3px;
+  padding-left: 71px;
+  width: 193px;
+  margin-bottom: 2px;
 }
 
 .telephone-number img {
   position: absolute;
-  top: 11px;
-  left: 40px;
+  top: 12px;
+  left: 37px;
 }
 
 .site-navigation {
@@ -1357,13 +1361,17 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   justify-content: flex-start;
   grid-column: 1 / -1;
-  margin-top: 21px;
-  margin-bottom: 20px;
+  margin-top: 17px;
+  margin-bottom: 18px;
 }
 
 .breadcrumbs li {
   position: relative;
   padding-right: 41px;
+}
+
+.breadcrumbs li:last-child {
+  padding-left: 1px;
 }
 
 .breadcrumbs li:not(:last-child)::after {
@@ -1391,6 +1399,10 @@ input[type="radio"].visually-hidden {
   padding-top: 29px;
   padding-left: 29px;
   padding-bottom: 30px;
+}
+
+.title-container .title {
+  letter-spacing: -0.8px;
 }
 
 .container-title-catalog {
@@ -1697,6 +1709,7 @@ fieldset legend {
 .catalog-item .title-small {
   position: absolute;
   bottom: 98px;
+  text-transform: none;
 }
 
 .catalog-item span {
