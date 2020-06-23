@@ -98,11 +98,18 @@
             <h2 class="title">Перфораторы</h2>
             <p>Настоящие мужские игрушки</p>
             <a href="catalog.html" class="main-btn">Открыть каталог</a>
+            <a class="arrows" href=""></a>
+            <div class="slider"></div>
+            <div class="active"></div>
           </li>
           <li class="carousel-goods drill modal">
             <h2>Дрели</h2>
             <p>Соседям на радость!</p>
             <a href="catalog.html" class="main-btn">Открыть каталог</a>
+            <a class="arrows" href=""></a>
+            <div class="slider">
+              <div class="active"></div>
+            </div>
           </li>
         </ul>
       </section>
@@ -228,7 +235,7 @@
           <a href="https://yandex.ru/maps/" class="map-image">
             <img src="img/image-map.png" width="300" height="158" alt="Карта с нашим адресом">
           </a>
-          <a href="" class="main-btn btn-about-company">Заблудились? Напишите нам!</a>
+          <a href="" class="main-btn btn-about-company btn-write-us">Заблудились? Напишите нам!</a>
         </section>
         <!-- Скрытый блок с картой -->
         <section class="modal-maps modal">
@@ -242,15 +249,15 @@
           <form action="https://echo.htmlacademy.ru" method="post" class="form-feedback">
             <p class="appointment-item">
               <label for="user-name">Ваше имя:</label>
-              <input type="text" name="name" id="user-name" placeholder="Имя Фамилия">
+              <input type="text" class="input-user-name" name="name" id="user-name" placeholder="Имя Фамилия">
             </p>
             <p class="appointment-item">
               <label for="user-email">Ваш e-mail:</label>
-              <input type="email" name="email" id="user-email" placeholder="email@example.com">
+              <input type="email" class="input-user-email" name="email" id="user-email" placeholder="email@example.com">
             </p>
             <p class="appointment-text-area">
               <label for="user-text-mail">Текст письма:</label>
-              <textarea name="text-mail" id="user-text-mail">В свободной форме</textarea>
+              <textarea name="text-mail" class="user-message" id="user-text-mail" placeholder="В свободной форме"></textarea>
             </p>
             <button type="submit" class="main-btn btn-send-form">Отправить</button>
           </form>
@@ -308,5 +315,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/login.js"></script>
   </body>
 </html>

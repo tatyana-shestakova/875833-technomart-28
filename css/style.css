@@ -648,13 +648,25 @@ input[type="radio"].visually-hidden {
 
 .modal {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.close-btn-error {
+  animation: shake 0.8s;
 }
 
 .modal-maps {
-  position: absolute;
-  top: 14px;
-  left: 0;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
   height: 445px;
 }
 
@@ -680,10 +692,6 @@ input[type="radio"].visually-hidden {
 }
 
 .form-modal {
-  position: absolute;
-  top: 14px;
-  left: 152px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
   width: 620px;
   height: 430px;
   background-color: var(--basic-white);
@@ -738,7 +746,12 @@ input[type="radio"].visually-hidden {
   padding-left: 12px;
 }
 
-.form-feedback input::placeholder {
+.form-feedback .form-error {
+  border: 2px solid var(--special-error-color);
+}
+
+.form-feedback input::placeholder,
+.form-feedback textarea::placeholder {
   font-size: 13px;
   line-height: 24px;
   color: #A9A9A9;
@@ -747,7 +760,6 @@ input[type="radio"].visually-hidden {
 .appointment-text-area textarea {
   font-size: 13px;
   line-height: 24px;
-  color: #A9A9A9;
   width: 444px;
   height: 100px;
   border: 2px solid #C5C5C5;
@@ -756,6 +768,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
   padding-left: 12px;
   padding-top: 6px;
+  resize: none;
 }
 
 .btn-send-form {
@@ -1029,7 +1042,7 @@ input[type="radio"].visually-hidden {
   position: relative;
 }
 
-.carousel-goods::before {
+.arrows::before {
   content: " ";
   position: absolute;
   width: 22px;
@@ -1041,7 +1054,7 @@ input[type="radio"].visually-hidden {
   top: 122px;
 }
 
-.carousel-goods::after {
+.arrows::after {
   content: " ";
   position: absolute;
   width: 22px;
@@ -1078,16 +1091,60 @@ input[type="radio"].visually-hidden {
   padding-left: 3px;
 }
 
+.slider::before {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--basic-white);
+  bottom: 36px;
+  left: 295px;
+  cursor: pointer;
+}
+
+.slider::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--basic-white);
+  bottom: 36px;
+  left: 315px;
+  cursor: pointer;
+}
+
 .perforator {
   background-image: url("../img/image-catalog-perforator.jpg");
   background-repeat: no-repeat;
   background-position: 0% 0%;
 }
 
+.perforator .active {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #EE3643;
+  bottom: 38px;
+  left: 317px;
+}
+
 .drill {
   background-image: url("../img/drill.jpg");
   background-repeat: no-repeat;
   background-position: 0% 0%;
+}
+
+.drill .active {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #EE3643;
+  bottom: 38px;
+  left: 297px;
 }
 
 /* Index, популярные товары */
@@ -1638,10 +1695,6 @@ input[type="radio"].visually-hidden {
   margin-bottom: 12px;
 }
 
-.filter-radio li {
-  padding-bottom: 22px;
-}
-
 .filters legend {
   font-weight: bold;
   font-size: 17px;
@@ -1770,6 +1823,10 @@ input[name="max-price"] {
   padding: 0;
 }
 
+.filter-radio li {
+  padding-bottom: 22px;
+}
+
 /* Товары */
 
 .products {
@@ -1816,7 +1873,7 @@ input[name="max-price"] {
 .catalog-item .hidden-block {
   display: none;
   position: absolute;
-  top: 38px;
+  top: 36px;
   left: 41px;
 }
 
@@ -1855,12 +1912,13 @@ input[name="max-price"] {
 }
 
 .image-bosch-3000 {
-  margin-top: 29px;
-  margin-right: 9px;
+  margin-top: 27px;
+  margin-right: 13px;
 }
 
 .image-bosch-2000 {
-  margin-top: 29px;
+  margin-top: 27px;
+  margin-right: 10px;
 }
 
 .catalog-item a {
@@ -1979,7 +2037,7 @@ input[name="max-price"] {
   margin: 0;
   padding: 0;
   display: flex;
-  margin-top: 48px;
+  margin-top: 47px;
 }
 
 .pagination-item a,
@@ -2039,5 +2097,45 @@ input[name="max-price"] {
 
 .article-about-puncher p {
   margin-top: 25px;
-  margin-bottom: 70px;
+  margin-bottom: 68px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
