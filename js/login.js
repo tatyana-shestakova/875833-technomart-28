@@ -1,3 +1,7 @@
+let slider = document.querySelector(".arrows");
+let carouselPerforator = document.querySelector(".perforator");
+let carouselDrill = document.querySelector(".drill");
+
 let openForm = document.querySelector(".btn-write-us");
 let popupForm = document.querySelector(".form-modal");
 let feedbackForm = document.querySelector(".form-feedback");
@@ -5,6 +9,12 @@ let closeForm = document.querySelector(".btn-close");
 let userName = document.querySelector(".input-user-name");
 let userMail = document.querySelector(".input-user-email");
 let userMessage = document.querySelector(".user-message");
+
+slider.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  carouselPerforator.classList.toggle("carousel-item-show");
+  carouselDrill.classList.toggle("carousel-item-show");
+});
 
 var isStorageSupport = true;
 var storageMail = "";
