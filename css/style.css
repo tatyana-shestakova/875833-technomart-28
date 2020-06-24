@@ -663,10 +663,6 @@ input[type="radio"].visually-hidden {
   animation: bounce 0.6s;
 }
 
-.modal-show-catalog {
-  display: block;
-}
-
 .close-btn-error {
   animation: shake 0.8s;
 }
@@ -1163,10 +1159,6 @@ input[type="radio"].visually-hidden {
   left: 297px;
 }
 
-.carousel-item-show {
-  display: block;
-}
-
 /* Index, популярные товары */
 
 .popular-products {
@@ -1308,7 +1300,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   padding-top: 66px;
-  padding-bottom: 80px;
+  padding-bottom: 98px;
 }
 
 .about-service {
@@ -1331,11 +1323,6 @@ input[type="radio"].visually-hidden {
   margin-left: 0;
   margin-bottom: 31px;
   margin-top: -1px;
-}
-
-.service {
-  padding-bottom: 50px;
-
 }
 
 .list-service {
@@ -1385,6 +1372,7 @@ input[type="radio"].visually-hidden {
 
 .service-delivery {
   width: 313px;
+  display: none;
 }
 
 .service-delivery::after {
@@ -1401,33 +1389,35 @@ input[type="radio"].visually-hidden {
 
 .service-guarantee {
   width: 331px;
+  display: none;
 }
 
 .service-guarantee::after {
   content: " ";
   position: absolute;
   width: 389px;
-  height: 283px;
+  height: 261px;
   background-image: url("../img/image-garant.png");
   background-repeat: no-repeat;
   background-size: 389px 283px;
-  bottom: -49px;
+  bottom: -75px;
   right: 0;
 }
 
 .service-credit {
   width: 309px;
+  display: none;
 }
 
 .service-credit::after {
   content: " ";
   position: absolute;
   width: 465px;
-  height: 285px;
+  height: 261px;
   background-image: url("../img/image-credit.png");
   background-repeat: no-repeat;
   background-size: 465px 285px;
-  bottom: -49px;
+  bottom: -75px;
   right: 0;
 }
 
@@ -2118,6 +2108,10 @@ input[name="max-price"] {
 .article-about-puncher p {
   margin-top: 25px;
   margin-bottom: 68px;
+}
+
+.hidden-show {
+  display: block;
 }
 
 @keyframes bounce {

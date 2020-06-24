@@ -5,24 +5,24 @@ let continueButton = document.querySelector(".continue-buy")
 
 buttonBuy.addEventListener("click", function(evt) {
   evt.preventDefault();
-  popupBasket.classList.add("modal-show-catalog");
+  popupBasket.classList.add("hidden-show");
 });
 
 closeButton.addEventListener("click", function(evt) {
   evt.preventDefault();
-  popupBasket.classList.remove("modal-show-catalog");
+  popupBasket.classList.remove("hidden-show");
 });
 
 continueButton.addEventListener("click", function(evt) {
   evt.preventDefault();
-  popupBasket.classList.remove("modal-show-catalog");
+  popupBasket.classList.remove("hidden-show");
 });
 
 window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
-    if (popupBasket.classList.contains("modal-show-catalog")) {
+    if (popupBasket.classList.contains("hidden-show")) {
       evt.preventDefault();
-      popupBasket.classList.remove("modal-show-catalog");
+      popupBasket.classList.remove("hidden-show");
     }
   }
 });
