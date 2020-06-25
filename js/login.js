@@ -120,3 +120,29 @@ window.addEventListener("keydown", function(evt) {
     }
   }
 });
+
+// Карта
+
+let mapImage = document.querySelector(".map-image");
+let mapPopup = document.querySelector(".modal-maps");
+let closeMap = document.querySelector(".hidden-btn-maps");
+
+
+mapImage.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  mapPopup.classList.add("modal-show");
+});
+
+closeMap.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  mapPopup.classList.remove("modal-show");
+});
+
+window.addEventListener("keydown", function(evt) {
+  if (evt.keyCode === 27) {
+    if (mapPopup.classList.contains("modal-show")) {
+      evt.preventDefault();
+      mapPopup.classList.remove("modal-show");
+    }
+  }
+});
