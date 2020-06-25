@@ -17,6 +17,10 @@ let userName = document.querySelector(".input-user-name");
 let userMail = document.querySelector(".input-user-email");
 let userMessage = document.querySelector(".user-message");
 
+let mapImage = document.querySelector(".map-image");
+let mapPopup = document.querySelector(".modal-maps");
+let closeMap = document.querySelector(".hidden-btn-maps");
+
 //Карусель
 
 slider.addEventListener("click", function(evt) {
@@ -122,11 +126,6 @@ window.addEventListener("keydown", function(evt) {
 });
 
 // Карта
-
-let mapImage = document.querySelector(".map-image");
-let mapPopup = document.querySelector(".modal-maps");
-let closeMap = document.querySelector(".hidden-btn-maps");
-
 
 mapImage.addEventListener("click", function(evt) {
   evt.preventDefault();

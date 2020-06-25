@@ -1325,7 +1325,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   padding-top: 66px;
-  padding-bottom: 98px;
+  padding-bottom: 100px;
 }
 
 .about-service {
@@ -1408,13 +1408,14 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/image-delivery.png");
   background-repeat: no-repeat;
   background-size: 468px 261px;
-  bottom: -75px;
+  bottom: -95px;
   right: 0;
 }
 
 .service-guarantee {
   width: 331px;
   display: none;
+  padding-top: 5px;
 }
 
 .service-guarantee::after {
@@ -1425,8 +1426,13 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/image-garant.png");
   background-repeat: no-repeat;
   background-size: 389px 283px;
-  bottom: -75px;
-  right: 0;
+  bottom: -77px;
+  right: -7px;
+}
+
+.service-guarantee .title-deepblue {
+  font-size: 36px;
+  line-height: 24px;
 }
 
 .service-credit {
@@ -1443,13 +1449,19 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   background-size: 465px 285px;
   bottom: -75px;
-  right: 0;
+  right: -10px;
 }
 
 .service-credit .main-btn{
   width: 195px;
   border-radius: 2px;
   margin-top: 27px;
+}
+
+.service-credit .title-deepblue {
+  font-size: 36px;
+  line-height: 24px;
+  padding-bottom: 4px;
 }
 
 /* Index, о компании */
@@ -1649,22 +1661,36 @@ input[type="radio"].visually-hidden {
   text-decoration-color: var(--basic-red);
 }
 
-.sorting .btn-direction {
+.sorting .active-sorting-item {
+  color: var(--basic-red);
   text-decoration: none;
-}
-
-.sorting .btn-direction:last-child {
-  margin-left: 15px;
-  margin-right: 14px;
 }
 
 .sorting a:hover{
   color: var(--basic-font-black-color);
+  text-decoration-color: var(--basic-red);
 }
 
 .sorting a:active {
   color: var(--basic-red);
   text-decoration: none;
+}
+
+.sorting .btn-direction {
+  text-decoration: none;
+}
+
+.sorting .btn-direction:hover {
+  color: var(--basic-font-black-color);
+}
+
+.sorting .btn-direction:active {
+  color: var(--basic-red);
+}
+
+.sorting .btn-direction:last-child {
+  margin-left: 15px;
+  margin-right: 14px;
 }
 
 /* Форма */
