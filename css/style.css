@@ -1,3 +1,4 @@
+
 :root {
   --basic-font-black-color: #000000;
   --basic-font-deepblue-color: #32425C;
@@ -43,8 +44,6 @@ img {
   box-sizing: content-box;
 }
 
-/* Сетка */
-
 .page {
   height: 100%;
 }
@@ -52,6 +51,7 @@ img {
 .page-body {
   min-height: 100%;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
@@ -60,9 +60,6 @@ img {
   width: 940px;
   margin: 0 auto;
 }
-
-
-/* Скрытые элементы */
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -74,12 +71,12 @@ input[type="radio"].visually-hidden {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
-/* Стилизация шапки */
 .main-header {
   background-color: var(--basic-font-lightgrey-color);
 }
@@ -130,6 +127,14 @@ input[type="radio"].visually-hidden {
   background-position: 17px 11px;
 }
 
+.navigation-wrapper input::-webkit-input-placeholder {
+  color: var(--basic-white);
+}
+
+.navigation-wrapper input::-moz-placeholder {
+  color: var(--basic-white);
+}
+
 .navigation-wrapper input::placeholder {
   color: var(--basic-white);
 }
@@ -142,6 +147,14 @@ input[type="radio"].visually-hidden {
   color: var(--basic-font-black-color);
   background-color: var(--basic-white);
   background-image: url(../img/icon-search-red.svg);
+}
+
+.navigation-wrapper input:focus::-webkit-input-placeholder {
+  color: var(--basic-font-black-color);
+}
+
+.navigation-wrapper input:focus::-moz-placeholder {
+  color: var(--basic-font-black-color);
 }
 
 .navigation-wrapper input:focus::placeholder {
@@ -199,6 +212,7 @@ input[type="radio"].visually-hidden {
 .btn-bookmarks {
   width: 130px;
   background-image: url(../img/icon-bookmark.svg);
+  background-color: inherit;
   background-repeat: no-repeat;
   background-position: 20px 12px;
   background-size: 14px 16px;
@@ -212,6 +226,7 @@ input[type="radio"].visually-hidden {
 .btn-basket {
   width: 127px;
   background-image: url(../img/icon-cart.svg);
+  background-color: inherit;
   background-repeat: no-repeat;
   background-position: 25px 13px;
   background-size: 15px;
@@ -263,6 +278,7 @@ input[type="radio"].visually-hidden {
   height: 18px;
   position: absolute;
   background-image: url(../img/icon-user.svg);
+  background-color: inherit;
   background-repeat: no-repeat;
   background-size: 20px 18px;
   left: 15px;
@@ -290,6 +306,7 @@ input[type="radio"].visually-hidden {
   background-color: var(--basic-white);
   background-image: url(../img/icon-logout.svg);
   background-size: 19px 17px;
+  background-color: inherit;
   position: absolute;
   right: 18px;
   bottom: 15px;
@@ -320,6 +337,7 @@ input[type="radio"].visually-hidden {
   width: 6px;
   height: 7px;
   background-image: url(../img/icon-marker.svg);
+  background-color: inherit;
   background-repeat: no-repeat;
   left: 12px;
   top: 7px;
@@ -369,6 +387,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 12px;
   text-align: center;
   background-image: url(../img/icon-login.svg);
+  background-color: inherit;
   background-repeat: no-repeat;
   background-size: 20px 17px;
   background-position: 19px 13px;
@@ -469,7 +488,6 @@ input[type="radio"].visually-hidden {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* Стилизация футера */
 .main-footer p {
   margin: 0;
   padding: 0;
@@ -644,8 +662,6 @@ input[type="radio"].visually-hidden {
   margin-right: 13px;
 }
 
-/* Модальные окна */
-
 .modal {
   display: none;
   position: fixed;
@@ -660,11 +676,13 @@ input[type="radio"].visually-hidden {
 
 .modal-show {
   display: block;
-  animation: bounce 0.6s;
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;
 }
 
 .close-btn-error {
-  animation: shake 0.8s;
+  -webkit-animation: shake 0.8s;
+          animation: shake 0.8s;
 }
 
 .modal-maps {
@@ -703,6 +721,7 @@ input[type="radio"].visually-hidden {
   height: 21px;
   position: absolute;
   background-image: url(../img/icon-btn-close.svg);
+  background-color: inherit;
   background-repeat: no-repeat;
   background-size: 21px;
   top: 17px;
@@ -774,6 +793,18 @@ input[type="radio"].visually-hidden {
 
 .form-feedback .form-error {
   border: 2px solid var(--special-error-color);
+}
+
+.form-feedback input::-webkit-input-placeholder, .form-feedback textarea::-webkit-input-placeholder {
+  font-size: 13px;
+  line-height: 24px;
+  color: #A9A9A9;
+}
+
+.form-feedback input::-moz-placeholder, .form-feedback textarea::-moz-placeholder {
+  font-size: 13px;
+  line-height: 24px;
+  color: #A9A9A9;
 }
 
 .form-feedback input::placeholder,
@@ -864,6 +895,7 @@ input[type="radio"].visually-hidden {
   width: 66px;
   height: 66px;
   background-image: url(../img/icon-mark.svg);
+  background-color: inherit;
   background-repeat: no-repeat;
   background-size: 66px;
   left: -84px;
@@ -899,8 +931,6 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-/* Свойства товара */
-
 .new:after {
   content: " ";
   width: 70px;
@@ -914,8 +944,6 @@ input[type="radio"].visually-hidden {
   right: 0px;
   z-index: 2;
 }
-
-/* Index, основные свойства */
 
 .main-btn {
   font-family: "Cuprum", Arial, sans-serif;
@@ -962,8 +990,6 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
 }
-
-/* Index, преимущества */
 
 .advantages {
   font-family: "Cuprum", Arial, sans-serif;
@@ -1148,6 +1174,7 @@ input[type="radio"].visually-hidden {
 
 .perforator {
   display: none;
+  background-color: var(--basic-red);
   background-image: url("../img/image-catalog-perforator.jpg");
   background-repeat: no-repeat;
   background-position: 0% 0%;
@@ -1167,6 +1194,7 @@ input[type="radio"].visually-hidden {
 
 .drill {
   display: none;
+  background-color: var(--basic-red);
   background-image: url("../img/drill.jpg");
   background-repeat: no-repeat;
   background-position: 0% 0%;
@@ -1183,8 +1211,6 @@ input[type="radio"].visually-hidden {
   bottom: 38px;
   left: 297px;
 }
-
-/* Index, популярные товары */
 
 .popular-products {
   display: flex;
@@ -1232,8 +1258,6 @@ input[type="radio"].visually-hidden {
   grid-template-rows: 318px ;
   gap: 20px;
 }
-
-/* Index, популярные производители */
 
 .popular-manufacturers {
   display: flex;
@@ -1311,7 +1335,6 @@ input[type="radio"].visually-hidden {
   top: 33px;
 }
 
-/* Index, о сервисах */
 .container-service {
   background-color: var(--basic-background-grey);
 }
@@ -1405,6 +1428,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   width: 468px;
   height: 261px;
+  background-color: inherit;
   background-image: url("../img/image-delivery.png");
   background-repeat: no-repeat;
   background-size: 468px 261px;
@@ -1423,6 +1447,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   width: 389px;
   height: 261px;
+  background-color: inherit;
   background-image: url("../img/image-garant.png");
   background-repeat: no-repeat;
   background-size: 389px 283px;
@@ -1445,6 +1470,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   width: 465px;
   height: 261px;
+  background-color: inherit;
   background-image: url("../img/image-credit.png");
   background-repeat: no-repeat;
   background-size: 465px 285px;
@@ -1463,8 +1489,6 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
   padding-bottom: 4px;
 }
-
-/* Index, о компании */
 
 .container-about-company {
   display: flex;
@@ -1546,8 +1570,6 @@ input[type="radio"].visually-hidden {
   font-size: 18px;
   line-height: 24px;
 }
-
-/* Catalog*/
 
 .page-catalog {
   display: grid;
@@ -1631,10 +1653,8 @@ input[type="radio"].visually-hidden {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 21px;
-  margin-top: 20px;
+  margin-top: 18px;
 }
-
-/* Фильтры */
 
 .title-filter {
   font-size: 13px;
@@ -1657,35 +1677,37 @@ input[type="radio"].visually-hidden {
 
 .sorting a {
   color: rgba(0,0,0,0.3);
-  text-decoration: underline;
-  text-decoration-color: var(--basic-red);
+  border-bottom: 1px dotted var(--basic-red);
 }
 
 .sorting .active-sorting-item {
   color: var(--basic-red);
-  text-decoration: none;
+  border: none;
 }
 
 .sorting a:hover{
   color: var(--basic-font-black-color);
-  text-decoration-color: var(--basic-red);
+  border-bottom: 1px solid var(--basic-red);
 }
 
 .sorting a:active {
   color: var(--basic-red);
-  text-decoration: none;
+  border: none;
 }
 
 .sorting .btn-direction {
-  text-decoration: none;
+  border: none;
+  font-size: 14px;
 }
 
 .sorting .btn-direction:hover {
   color: var(--basic-font-black-color);
+  border: none;
 }
 
 .sorting .btn-direction:active {
   color: var(--basic-red);
+  border: none;
 }
 
 .sorting .btn-direction:last-child {
@@ -1693,7 +1715,14 @@ input[type="radio"].visually-hidden {
   margin-right: 14px;
 }
 
-/* Форма */
+.sorting-type {
+  margin-left: 25px;
+  margin-right: 19px;
+}
+
+.filter {
+  margin-top: 2px;
+}
 
 .filters {
   width: 220px;
@@ -1713,7 +1742,9 @@ input[type="radio"].visually-hidden {
   position: relative;
   display: block;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   margin-left: 35px;
 }
 
@@ -1888,8 +1919,6 @@ input[name="max-price"] {
   padding-bottom: 22px;
 }
 
-/* Товары */
-
 .products {
   margin-left: 19px;
 }
@@ -1898,9 +1927,10 @@ input[name="max-price"] {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 28px;
+  margin-top: 29px;
   display: grid;
   grid-template-columns: 220px 220px 220px;
+  grid-template-rows: 318px -webkit-min-content;
   grid-template-rows: 318px min-content;
   grid-row-gap: 18px;
   grid-column-gap: 20px;
@@ -1939,11 +1969,12 @@ input[name="max-price"] {
 }
 
 .catalog-item-image {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
 }
 
-.catalog-item:hover .catalog-item-image:not(.products-image) {
+.catalog-item:hover .catalog-item-image {
   visibility: hidden;
 }
 
@@ -1990,16 +2021,12 @@ input[name="max-price"] {
   text-align: center;
 }
 
-.list-popular-products .catalog-item {
-  border: 1px solid #EAEAEA;
-  box-shadow: none;
-}
-
-.catalog-item .line-through-price {
+.line-through-price {
   display: inline-block;
   vertical-align: middle;
   text-decoration: line-through;
   color: #A9A9A9;
+  padding-left: 3px;
 }
 
 .catalog-item p:last-child {
@@ -2024,6 +2051,19 @@ input[name="max-price"] {
   margin-top: 13px;
   margin-left: 12px;
   padding-right: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.catalog-item .red-price::after {
+  position: absolute;
+  content: " ";
+  background-color: var(--basic-red);
+  width: 110px;
+  height: 37px;
+  top: 0;
+  left: 10px;
+  z-index: -1;
 }
 
 .btn-buy-hover {
@@ -2091,8 +2131,6 @@ input[name="max-price"] {
   opacity: 50%;
 }
 
-/* Пагинация */
-
 .pagination-list {
   list-style: none;
   margin: 0;
@@ -2109,12 +2147,12 @@ input[name="max-price"] {
   padding-top: 9px;
   padding-bottom: 10px;
   border: 1px solid #E5E5E5;
-  border-radius: 2px;
+  border-radius: 3px;
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-font-black-color);
   background-color: var(--basic-white);
-  margin-right: 10px;
+  margin-right: 9px;
   text-transform: uppercase;
 }
 
@@ -2143,8 +2181,6 @@ input[name="max-price"] {
   color: var(--basic-white);
 }
 
-/* Статья */
-
 .article-about-puncher {
   background-color: var(--basic-background-grey);
   grid-column: 1 / -1;
@@ -2165,6 +2201,24 @@ input[name="max-price"] {
   display: block;
 }
 
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes bounce {
   0% {
     transform: translateY(-2000px);
@@ -2180,6 +2234,28 @@ input[name="max-price"] {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
 

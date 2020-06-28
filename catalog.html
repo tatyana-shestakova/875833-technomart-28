@@ -5,7 +5,7 @@
     <title>HTML Academy: Техномарт. Каталог</title>
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page-body inner-page">
     <header class="main-header">
@@ -55,7 +55,7 @@
             </p>
             <div class="btns-user login">
               <p>
-                <a href="" class="user-name">Равшан Джамшутович</a>
+                <a href="profile.html" class="user-name">Равшан Джамшутович</a>
                 <button type="button" class="btn-logout" aria-label="Выйти"></button>
               </p>
               <ul class="users-list">
@@ -92,7 +92,7 @@
           <h3 class="title-filter">Сортировка:</h3>
           <ul class="list-sorting">
             <li><a href="" class="active-sorting-item">По цене</a></li>
-            <li><a href="">По типу</a></li>
+            <li><a href="" class="sorting-type">По типу</a></li>
             <li><a href="" class="list-sorting-item">По функционалу</a></li>
             <li>
               <a href="" class="btn-direction active-sorting-item" aria-label="Сортировка по возрастанию">▲</a>
@@ -102,6 +102,7 @@
         </div>
       </section>
       <section class="sorting filters">
+        <h2 class="visually-hidden">Основные фильтры</h2>
         <form action="https://echo.htmlacademy.ru" method="get" oninput="resultmax.value=count.value" class="filter">
           <fieldset class="filter-price">
             <legend>Цена:</legend>
@@ -168,7 +169,7 @@
         <ul class="catalog-items">
           <li class="catalog-item">
             <div class="hidden-block">
-              <a href="" class="btn-buy btn-buy-hover">Купить</a>
+              <a href="basket.html" class="btn-buy btn-buy-hover">Купить</a>
               <button type="button" class="btn-bookmark btn-buy-hover">В закладки</button>
             </div>
             <a href="">
@@ -184,7 +185,7 @@
           </li>
           <li class="catalog-item">
             <div class="hidden-block">
-              <a href="" class="btn-buy btn-buy-hover">Купить</a>
+              <a href="basket.html" class="btn-buy btn-buy-hover">Купить</a>
               <button type="button" class="btn-bookmark btn-buy-hover">В закладки</button>
             </div>
             <a href="">
@@ -200,7 +201,7 @@
           </li>
           <li class="catalog-item new">
             <div class="hidden-block">
-              <a href="" class="btn-buy btn-buy-hover">Купить</a>
+              <a href="basket.html" class="btn-buy btn-buy-hover">Купить</a>
               <button type="button" class="btn-bookmark btn-buy-hover">В закладки</button>
             </div>
             <a href="">
@@ -216,7 +217,7 @@
           </li>
           <li class="catalog-item new">
             <div class="hidden-block">
-              <a href="" class="btn-buy btn-buy-hover">Купить</a>
+              <a href="basket.html" class="btn-buy btn-buy-hover">Купить</a>
               <button type="button" class="btn-bookmark btn-buy-hover">В закладки</button>
             </div>
             <a href="">
@@ -232,7 +233,7 @@
           </li>
           <li class="catalog-item">
             <div class="hidden-block">
-              <a href="" class="btn-buy btn-buy-hover">Купить</a>
+              <a href="basket.html" class="btn-buy btn-buy-hover">Купить</a>
               <button type="button" class="btn-bookmark btn-buy-hover">В закладки</button>
             </div>
             <a href="">
@@ -248,7 +249,7 @@
           </li>
           <li class="catalog-item new">
             <div class="hidden-block">
-              <a href="" class="btn-buy btn-buy-hover">Купить</a>
+              <a href="basket.html" class="btn-buy btn-buy-hover">Купить</a>
               <button type="button" class="btn-bookmark btn-buy-hover">В закладки</button>
             </div>
             <a href="">
@@ -263,7 +264,7 @@
           </li>
           <li class="catalog-item new">
             <div class="hidden-block">
-              <a href="" class="btn-buy btn-buy-hover">Купить</a>
+              <a href="basket.html" class="btn-buy btn-buy-hover">Купить</a>
               <button type="button" class="btn-bookmark btn-buy-hover">В закладки</button>
             </div>
             <a href="">
@@ -279,7 +280,7 @@
           </li>
           <li class="catalog-item">
             <div class="hidden-block">
-              <a href="" class="btn-buy btn-buy-hover">Купить</a>
+              <a href="basket.html" class="btn-buy btn-buy-hover">Купить</a>
               <button type="button" class="btn-bookmark btn-buy-hover">В закладки</button>
             </div>
             <a href="">
@@ -295,7 +296,7 @@
           </li>
           <li class="catalog-item new">
             <div class="hidden-block">
-              <a href="" class="btn-buy btn-buy-hover">Купить</a>
+              <a href="basket.html" class="btn-buy btn-buy-hover">Купить</a>
               <button type="button" class="btn-bookmark btn-buy-hover">В закладки</button>
             </div>
             <a href="">
@@ -370,7 +371,7 @@
             Все права защищены
           </p>
           <ul class="socials">
-            <li><a href="https://vk.com/" aria-label="ВКонтакте"><img src="img/icon-vk.svg" width="25.05" height="14.06" alt="Мы ВКонтакте"></a></li>
+            <li><a href="https://vk.com/" aria-label="ВКонтакте"><img src="img/icon-vk.svg" width="25" height="14" alt="Мы ВКонтакте"></a></li>
             <li><a href="https://ru-ru.facebook.com/" aria-label="Facebook"><img src="img/icon-fb.svg" width="12" height="22" alt="Мы в Facebook"></a></li>
             <li><a href="https://www.instagram.com/" aria-label="Instagram"><img src="img/icon-insta.svg" width="21" height="21" alt="Мы в Instagram"></a></li>
           </ul>
@@ -387,6 +388,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/popup.js"></script>
+    <script src="js/popup.min.js"></script>
   </body>
 </html>

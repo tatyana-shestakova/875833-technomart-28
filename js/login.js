@@ -21,7 +21,6 @@ let mapImage = document.querySelector(".map-image");
 let mapPopup = document.querySelector(".modal-maps");
 let closeMap = document.querySelector(".hidden-btn-maps");
 
-//Карусель
 
 slider.addEventListener("click", function(evt) {
   evt.preventDefault();
@@ -31,8 +30,6 @@ slider.addEventListener("click", function(evt) {
 
 var isStorageSupport = true;
 var storageMail = "";
-
-//Выбор сервиса
 
 deliveryItem.addEventListener ("click" , function(evt) {
   evt.preventDefault();
@@ -64,7 +61,6 @@ creditItem.addEventListener ("click" , function(evt) {
   serviceDelivery.classList.remove("hidden-show");
 });
 
-// Форма сообщения
 try {
   storageMail = localStorage.getItem("email");
 } catch (err) {
@@ -74,14 +70,12 @@ try {
 openForm.addEventListener("click", function(evt) {
   evt.preventDefault();
   popupForm.classList.add("modal-show");
-
   if (storageMail) {
     userMail.value = storageMail;
     userMessage.focus();
   } else {
     userName.focus();
   }
-
 });
 
 closeForm.addEventListener("click", function(evt) {
@@ -124,8 +118,6 @@ window.addEventListener("keydown", function(evt) {
     }
   }
 });
-
-// Карта
 
 mapImage.addEventListener("click", function(evt) {
   evt.preventDefault();
