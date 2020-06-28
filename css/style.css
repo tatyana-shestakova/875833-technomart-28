@@ -1249,6 +1249,10 @@ input[type="radio"].visually-hidden {
   margin-right: 19px;
 }
 
+.popular-products .bnt-popular {
+  margin-right: 14px;
+}
+
 .list-popular-products {
   list-style: none;
   margin: 0;
