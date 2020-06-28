@@ -1,4 +1,3 @@
-
 :root {
   --basic-font-black-color: #000000;
   --basic-font-deepblue-color: #32425C;
@@ -112,7 +111,12 @@ input[type="radio"].visually-hidden {
   height: 42px;
 }
 
-.navigation-wrapper input {
+.form-search {
+  display: flex;
+  position: relative;
+}
+
+.form-search input {
   background-color: var(--special-grey);
   height: 42px;
   padding: 0;
@@ -127,38 +131,55 @@ input[type="radio"].visually-hidden {
   background-position: 17px 11px;
 }
 
-.navigation-wrapper input::-webkit-input-placeholder {
-  color: var(--basic-white);
+.form-search .label-search {
+  display: block;
+  position: absolute;
+  left: 42px;
+  top: 9px;
 }
 
-.navigation-wrapper input::-moz-placeholder {
-  color: var(--basic-white);
+.search-input:focus ~ .label-search {
+  display: none;
 }
 
-.navigation-wrapper input::placeholder {
+.form-search input::-webkit-input-placeholder {
   color: var(--basic-white);
+  visibility: hidden;
 }
 
-.navigation-wrapper input:hover {
+.form-search input::-moz-placeholder {
+  color: var(--basic-white);
+  visibility: hidden;
+}
+
+.form-search input::placeholder {
+  color: var(--basic-white);
+  visibility: hidden;
+}
+
+.form-search input:hover {
   background-image: url(../img/icon-search.svg);
 }
 
-.navigation-wrapper input:focus {
+.form-search input:focus {
   color: var(--basic-font-black-color);
   background-color: var(--basic-white);
   background-image: url(../img/icon-search-red.svg);
 }
 
-.navigation-wrapper input:focus::-webkit-input-placeholder {
+.form-search input:focus::-webkit-input-placeholder {
   color: var(--basic-font-black-color);
+  visibility: visible;
 }
 
-.navigation-wrapper input:focus::-moz-placeholder {
+.form-search input:focus::-moz-placeholder {
   color: var(--basic-font-black-color);
+  visibility: visible;
 }
 
-.navigation-wrapper input:focus::placeholder {
+.form-search input:focus::placeholder {
   color: var(--basic-font-black-color);
+  visibility: visible;
 }
 
 .navigation-wrapper a,
@@ -1174,7 +1195,7 @@ input[type="radio"].visually-hidden {
 
 .perforator {
   display: none;
-  background-color: var(--basic-red);
+  background-color: #9f9993;
   background-image: url("../img/image-catalog-perforator.jpg");
   background-repeat: no-repeat;
   background-position: 0% 0%;
@@ -1194,7 +1215,7 @@ input[type="radio"].visually-hidden {
 
 .drill {
   display: none;
-  background-color: var(--basic-red);
+  background-color: #806157;
   background-image: url("../img/drill.jpg");
   background-repeat: no-repeat;
   background-position: 0% 0%;
